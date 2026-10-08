@@ -1,6 +1,8 @@
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
+import ThemeToggle from '@/components/shared/ThemeToggle';
+import HideOnApp from '@/components/shared/HideOnApp';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
 import { interTight } from '@/utils/font';
@@ -20,14 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${interTight.variable} antialiased`}>
+      <body className={`${interTight.variable} bg-white antialiased dark:bg-black`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Suspense>
             <SmoothScrollProvider>
               <ScrollProgress />
-              <Navbar />
+              <HideOnApp>
+                <Navbar />
+              </HideOnApp>
               {children}
-              <Footer />
+              <ThemeToggle />
+              <HideOnApp>
+                <Footer />
+              </HideOnApp>
             </SmoothScrollProvider>
           </Suspense>
         </ThemeProvider>

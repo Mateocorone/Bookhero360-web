@@ -2,31 +2,27 @@ import { FooterData } from '@/interface';
 
 export const footerLinks: FooterData[] = [
   {
-    title: 'Company',
+    title: 'Producto',
     links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Career', href: '/career' },
-      { label: 'Case Studies', href: '/case-study' },
-      { label: 'Contact Us', href: '/contact-us' },
+      { label: 'Funciones', href: '/#funciones' },
+      { label: 'Cómo funciona', href: '/#como-funciona' },
+      { label: 'Planes', href: '/#planes' },
+      { label: 'Probar la demo', href: '/app' },
     ],
   },
   {
-    title: 'Support',
+    title: 'Ayuda',
     links: [
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Documentation', href: '/documentation' },
-      { label: 'Tutorial', href: '/tutorial' },
-      { label: 'Support', href: '/support' },
+      { label: 'Preguntas frecuentes', href: '/#faq' },
+      { label: 'Contacto', href: '/contact-us' },
     ],
   },
   {
-    title: 'Legal Policies',
+    title: 'Legal',
     links: [
-      { label: 'Terms & Conditions', href: '/terms-conditions' },
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Refund Policy', href: '/refund-policy' },
-      { label: 'GDPR Compliance', href: '/gdpr' },
-      { label: 'Affiliate Policy', href: '/affiliate-policy' },
+      { label: 'Política de privacidad', href: '/privacy-policy' },
+      { label: 'Aviso legal', href: '/legal' },
+      { label: 'Términos y condiciones', href: '/terms-conditions' },
     ],
   },
 ];

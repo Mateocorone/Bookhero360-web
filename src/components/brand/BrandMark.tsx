@@ -2,7 +2,7 @@ import { cn } from '@/utils/cn';
 import BrandGlyph from './BrandGlyph';
 
 const BrandMark = ({ className }: { className?: string }) => (
-  <span className={cn('inline-flex size-10 shrink-0 drop-shadow-[0_8px_16px_rgba(13,143,132,.35)]', className)}>
+  <span className={cn('inline-flex size-10 shrink-0 drop-shadow-[0_8px_16px_rgba(47,93,240,.35)]', className)}>
     <BrandGlyph className="size-full" />
   </span>
 );

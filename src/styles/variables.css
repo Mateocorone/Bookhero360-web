@@ -5,15 +5,15 @@ All the varaiables are added here
   /* =============== FONTS =============== */
   --font-inter-tight: 'Inter Tight', sans-serif;
   /* =============== COLORS =============== */
-  --color-primary-50: #eefaf8;
-  --color-primary-100: #d4f3ef;
-  --color-primary-200: #a7e6df;
-  --color-primary-300: #6ad3c8;
-  --color-primary-400: #2bb5a8;
-  --color-primary-500: #0d8f84;
-  --color-primary-600: #0b7a71;
-  --color-primary-700: #09645d;
-  --color-primary-800: #074f49;
+  --color-primary-50: #eef3ff;
+  --color-primary-100: #dbe6ff;
+  --color-primary-200: #bccfff;
+  --color-primary-300: #8fadff;
+  --color-primary-400: #5f84ff;
+  --color-primary-500: #2f5df0;
+  --color-primary-600: #2447d1;
+  --color-primary-700: #1e39a8;
+  --color-primary-800: #1b3187;
   --color-secondary: #1a1a1c;
   --color-accent: #fcfcfc;
   --color-split-text: #1a1a1c;
@@ -39,25 +39,25 @@ All the varaiables are added here
   --color-stroke-8: #303b49;
   --color-stroke-9: var(--color-background-8);
   --color-ns-yellow: #f9eb57;
-  --color-ns-green: #c6f56f;
+  --color-ns-green: #ffc94d;
   --color-ns-red: #ffb9a2;
-  --color-ns-cyan: #83e7ee;
-  --color-ns-green-light: #e8fbc6;
-  --color-ns-cyan-light: #cdf5f8;
+  --color-ns-cyan: #9db8ff;
+  --color-ns-green-light: #fff1cc;
+  --color-ns-cyan-light: #dfe8ff;
   --color-ns-yellow-light: #fdf7bc;
 
-  --color-gradient-1: linear-gradient(135deg, #a585ff 0%, #ffc2ad 100%);
+  --color-gradient-1: linear-gradient(135deg, #7a9bff 0%, #ffd9a8 100%);
   --color-gradient-2: linear-gradient(135deg, #f9eb57 0%, #f99988 100%);
-  --color-gradient-3: linear-gradient(135deg, #83e7ee 0%, #f9eb57 100%);
-  --color-gradient-4: linear-gradient(135deg, #864ffe 0%, #23eed6 100%);
+  --color-gradient-3: linear-gradient(135deg, #9db8ff 0%, #f9eb57 100%);
+  --color-gradient-4: linear-gradient(135deg, #2f5df0 0%, #ffc94d 100%);
   --color-gradient-5: linear-gradient(165deg, rgba(255, 255, 255, 0.5) 0.51%, rgba(255, 255, 255, 0) 64.43%);
-  --color-gradient-6: linear-gradient(#83e7ee 0%, #c6f56f 100%);
-  --color-gradient-7: linear-gradient(#ffffff 0%, #83e7ee 100%);
-  --color-gradient-8: linear-gradient(156deg, #ffffff 32.92%, #a585ff 91%);
-  --color-gradient-9: linear-gradient(156deg, #dfb0ff 32.92%, #fdbedc 91%);
-  --color-gradient-10: linear-gradient(135deg, #83e7ee 0%, #c6f56f 100%);
+  --color-gradient-6: linear-gradient(#9db8ff 0%, #ffc94d 100%);
+  --color-gradient-7: linear-gradient(#ffffff 0%, #9db8ff 100%);
+  --color-gradient-8: linear-gradient(156deg, #ffffff 32.92%, #7a9bff 91%);
+  --color-gradient-9: linear-gradient(156deg, #c9d8ff 32.92%, #ffe0b0 91%);
+  --color-gradient-10: linear-gradient(135deg, #9db8ff 0%, #ffc94d 100%);
   --color-gradient-11: linear-gradient(179deg, rgba(255, 255, 255, 0) 0.68%, #fff 79.47%);
-  --color-gradient-12: radial-gradient(73.01% 80.77% at 19.23% 47.79%, #83e7ee 0%, rgba(134, 79, 254, 0) 100%);
+  --color-gradient-12: radial-gradient(73.01% 80.77% at 19.23% 47.79%, #9db8ff 0%, rgba(134, 79, 254, 0) 100%);
 
   /* =============== TYPOGRAPHY =============== */
   --text-heading-1: 4.25rem;
@@ -99,7 +99,7 @@ All the varaiables are added here
   --shadow-8: 0px 12.5px 40px -6px rgba(28, 34, 43, 0.1);
   --shadow-9: 0px 1px 2px 0px rgba(28, 34, 43, 0.05);
   --shadow-10: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  --shadow-11: 0px 12px 20px rgba(185, 166, 241, 0.16);
+  --shadow-11: 0px 12px 20px rgba(143, 173, 255, 0.2);
   --shadow-12: 0px 1px 2px 0px rgba(16, 24, 40, 0.26);
   --shadow-13: 0 7.818px 15.637px -3.909px rgba(28, 34, 43, 0.05), 0 15.637px 50.819px -3.909px rgba(28, 34, 43, 0.05);
   --shadow-14: 0 1px 2px 0 rgba(16, 24, 40, 0.06);

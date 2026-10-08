@@ -2,9 +2,7 @@
 'use client';
 import { useMobileMenuContext } from '@/context/MobileMenuContext';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logoIcon from '@public/images/shared/logo.svg';
-import Image from 'next/image';
+import BrandMark from '@/components/brand/BrandMark';
 import Link from 'next/link';
 import MenuCloseButton from './MenuCloseButton';
 import MobileMenuItem from './MobileMenuItem';
@@ -33,10 +31,7 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
         <div className="flex items-center justify-between">
           <Link href="/">
             <span className="sr-only">Home</span>
-            <figure className="max-w-[44px]">
-              <Image src={logoIcon} alt="NextSaaS" className="block w-full dark:hidden" />
-              <Image src={logoDark} alt="NextSaaS" className="hidden w-full dark:block" />
-            </figure>
+            <BrandMark className="size-11" />
           </Link>
           {/* close btn  */}
           <MenuCloseButton />

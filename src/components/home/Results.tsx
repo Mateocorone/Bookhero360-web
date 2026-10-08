@@ -12,60 +12,37 @@ interface ResultCard {
 }
 
 const resultCards: ResultCard[] = [
-  {
-    id: 1,
-    category: 'Clients',
-    value: '4K+',
-    description: 'Campaigns excuted in 2025',
-  },
-  {
-    id: 2,
-    category: 'Brand visibility',
-    value: '92.5%',
-    description: 'Platform uptime during peak campaign.',
-  },
-  {
-    id: 3,
-    category: 'satisfied clients globally.',
-    value: '500+',
-    description: 'Happy customers globally.',
-  },
-  {
-    id: 4,
-    category: 'Support response time.',
-    value: '2 minutes',
-    description: 'Support responds promptly',
-  },
-  {
-    id: 5,
-    category: 'Partnerships',
-    value: '150+',
-    description: 'Collaborations with institutions.',
-  },
+  { id: 1, category: 'Configuración', value: '5 pasos', description: 'Para dejar tu agenda lista para recibir reservas.' },
+  { id: 2, category: 'Confirmación', value: '1 correo', description: 'Se envía automáticamente en cada reserva.' },
+  { id: 3, category: 'Calendario', value: '2 vistas', description: 'Por mes y por semana, con la agenda del día.' },
+  { id: 4, category: 'Mensaje', value: '5 variables', description: 'Nombre, servicio, fecha, hora y negocio.' },
+  { id: 5, category: 'Instalación', value: '0 apps', description: 'Todo funciona desde el navegador.' },
 ];
 
 const Results = () => {
   return (
     <RevealAnimation delay={0.1}>
-      <section className="bg-background-2 dark:bg-background-5 relative pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]">
+      <section
+        id="esencial"
+        className="bg-background-2 dark:bg-background-5 relative pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]">
         <div className="main-container">
           <div className="mx-4 mb-[70px] space-y-14 text-center sm:mx-0 sm:text-left">
             <div className="space-y-3">
               <RevealAnimation delay={0.1}>
-                <h2 className="text-secondary dark:text-accent">Results that speak for themselves.</h2>
+                <h2 className="text-secondary dark:text-accent">Lo esencial, sin ruido.</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
                 <p className="text-secondary/60 dark:text-accent/60">
-                  A dynamic digital marketing agency trusted by clients around the globe.
+                  La versión Lite se enfoca en lo que de verdad importa para organizar tus reservas.
                 </p>
               </RevealAnimation>
             </div>
             <RevealAnimation delay={0.3}>
               <div>
                 <LinkButton
-                  href="/case-study"
+                  href="/#planes"
                   className="btn btn-secondary dark:btn-transparent btn-md hover:btn-white">
-                  Read more success stories.
+                  Ver el plan Lite.
                 </LinkButton>
               </div>
             </RevealAnimation>
@@ -85,7 +62,7 @@ const Results = () => {
                       index === 0 && 'ml-8',
                     )}>
                     <div className="pointer-events-none absolute -top-[107%] -right-[90%] -z-10 size-[500px] scale-90 -rotate-[60deg] opacity-0 transition-all duration-300 select-none group-hover:scale-100 group-hover:opacity-100">
-                      <Image src="/images/ns-img-514.png" alt="gradient" width={500} height={500} />
+                      <Image src="/images/ns-img-514.png" alt="" width={500} height={500} />
                     </div>
                     <div className="transform transition-all duration-700 ease-in-out group-hover:translate-y-[4px]">
                       <p className="text-secondary/60 dark:text-accent/60 mb-2 text-lg transition-colors duration-700 ease-in-out group-hover:text-white">

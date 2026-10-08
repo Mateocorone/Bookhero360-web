@@ -51,6 +51,23 @@ const SmoothScrollProvider = ({ children }: Readonly<SmoothScrollingProps>) => {
     };
   }, [lenis, pathname]);
 
+  useEffect(() => {
+    if (!lenis) return;
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.('a[href*="#"]') as HTMLAnchorElement | null;
+      if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target === '_blank') return;
+      const url = new URL(a.href, window.location.href);
+      if (url.origin !== window.location.origin || url.pathname !== window.location.pathname || !url.hash) return;
+      const el = document.querySelector(url.hash);
+      if (!el) return;
+      e.preventDefault();
+      lenis.scrollTo(el as HTMLElement, { offset: -100 });
+      window.history.pushState(null, '', url.hash);
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, [lenis]);
+
   return (
     <ReactLenis root options={{ duration: 1.1, anchors: { offset: -100 } }}>
       {children}

@@ -24,7 +24,7 @@ const ScrollProgress = () => {
     <div aria-hidden="true" className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-1">
       <div
         ref={bar}
-        className="from-primary-400 to-ns-yellow h-full origin-left scale-x-0 bg-gradient-to-r shadow-[0_0_12px_rgba(13,143,132,.6)]"
+        className="from-primary-400 to-ns-yellow h-full origin-left scale-x-0 bg-gradient-to-r shadow-[0_0_12px_rgba(47,93,240,.6)]"
       />
     </div>
   );

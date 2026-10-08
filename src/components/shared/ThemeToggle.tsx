@@ -1,31 +1,33 @@
 'use client';
 
 import { useTheme } from 'next-themes';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
+  if (!mounted || pathname === '/app' || pathname.startsWith('/app/')) {
     return null;
   }
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
   return (
     <button
       id="theme-toggle"
       onClick={toggleTheme}
-      aria-label="Toggle theme"
+      aria-label="Cambiar entre tema claro y oscuro"
       className="bg-background-8 fixed right-0 bottom-5 !z-[9999] flex size-12 cursor-pointer items-center justify-center rounded-l-2xl transition-colors duration-200 hover:opacity-80 dark:bg-white">
-      {theme === 'dark' ? (
+      {resolvedTheme === 'dark' ? (
         <span id="dark-theme-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
