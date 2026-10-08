@@ -1,13 +1,15 @@
-import BookshelfBackground from '@/components/bookhero/BookshelfBackground';
-import Audit from '@/components/home/Audit';
+import AutomationPlatform from '@/components/home/AutomationPlatform';
+import Blog from '@/components/home/Blog';
+import Clients from '@/components/home/Clients';
 import CTA from '@/components/home/CTA';
+import Faq from '@/components/home/Faq';
 import Hero from '@/components/home/Hero';
-import Results from '@/components/home/Results';
+import ImpressiveTemplates from '@/components/home/ImpressiveTemplates';
+import Plans from '@/components/home/Plans';
 import Services from '@/components/home/Services';
-import Steps from '@/components/home/Steps';
+import SimplifyFinance from '@/components/home/SimplifyFinance';
 import Testimonial from '@/components/home/Testimonial';
-import WhyUs from '@/components/home/WhyUs';
-import { Faq, Plans } from '@/components/bookhero/Sections';
+import WhyChooseUs from '@/components/home/WhyChooseUs';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -20,20 +22,19 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main>
-      <BookshelfBackground />
+    <main className="bg-white">
       <Hero />
-      <div className="relative z-10 bg-white dark:bg-black">
-        <Services />
-        <Steps />
-        <WhyUs />
-        <Results />
-        <Testimonial />
-        <Audit />
-        <Plans />
-        <Faq />
-        <CTA />
-      </div>
+      <Clients />
+      <Services />
+      <WhyChooseUs />
+      <SimplifyFinance />
+      <ImpressiveTemplates />
+      <Testimonial />
+      <AutomationPlatform />
+      <Blog />
+      <Plans />
+      <Faq />
+      <CTA />
     </main>
   );
 };

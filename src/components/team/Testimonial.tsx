@@ -11,7 +11,7 @@ const Testimonial = () => {
         {/* Header Section */}
         <div className="mb-14 text-center lg:mb-[70px]">
           <RevealAnimation delay={0.1}>
-            <span className="badge badge-green-v2 mb-5"> What our users say </span>
+            <span className="badge badge-cyan mb-5">What our users say</span>
           </RevealAnimation>
 
           <RevealAnimation delay={0.2}>
@@ -81,5 +81,5 @@ const Testimonial = () => {
     </section>
   );
 };
-Testimonial.displayName = 'Testimonial';
+
 export default Testimonial;

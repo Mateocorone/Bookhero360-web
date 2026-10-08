@@ -6,12 +6,12 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Whitepaper - Digital Marketing || NextSaaS',
+  title: 'Whitepaper - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-5">
+    <main className="bg-background-3">
       <Hero />
       <Research />
       <Client />

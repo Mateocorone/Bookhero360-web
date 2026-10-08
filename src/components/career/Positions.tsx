@@ -1,4 +1,4 @@
-import LinkButton from '@/components/ui/button/LinkButton';
+import LinkButton from '@/components/ui/button/Button';
 import { IPosition } from '@/interface';
 import getMarkDownData from '@/utils/getMarkDownData';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -38,9 +38,7 @@ const Positions = () => {
                     <p>{singlePost?.shortDescription}</p>
                   </div>
                   <div>
-                    <LinkButton
-                      href={`/career/${singlePost?.slug}`}
-                      className="btn hover:btn-secondary dark:btn-transparent dark:hover:btn-accent btn-md btn-white">
+                    <LinkButton href={`/career/${singlePost?.slug}`} className="btn-v3-lg btn-v3-secondary">
                       Read more
                     </LinkButton>
                   </div>

@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Services Details - Digital Marketing || NextSaaS',
+  title: 'Services Details - Financial Management Platform || NextSaaS',
 };
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -28,7 +28,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         ctaHeading="Build a complete website using the"
         spanText="assistance"
         description="Start your free trial today and see your ideas come to life easily and creatively."
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
       />
     </main>

@@ -70,4 +70,5 @@ const TestimonialStar = () => {
   );
 };
 
+TestimonialStar.displayName = 'TestimonialStar';
 export default TestimonialStar;

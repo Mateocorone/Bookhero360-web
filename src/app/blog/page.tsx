@@ -1,21 +1,19 @@
-import BlogShowcase from '@/components/blog/BlogShowcase';
-import FeaturedBlog from '@/components/blog/FeaturedBlog';
+import BlogListWrapper from '@/components/blog/BlogListWrapper';
 import CTA from '@/components/shared/cta/CTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Blog - Digital Marketing || NextSaaS',
+  title: 'Blog - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-7">
-      <FeaturedBlog />
-      <BlogShowcase />
+    <main className="bg-background-3 dark:bg-background-5">
+      <BlogListWrapper />
       <CTA
-        className="dark:bg-background-5 bg-white"
+        className="dark:bg-background-7 bg-white"
         badgeClass="!badge-yellow-v2"
         badgeText="Get started"
         ctaHeading="Build a complete website using the assistance"

@@ -17,7 +17,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ children, value, classNam
 
   return (
     <div
-      className={cn('accordion-item', disabled && 'pointer-events-none opacity-50', className)}
+      className={cn('accordion-item relative', disabled && 'pointer-events-none opacity-50', className)}
       data-value={value}
       data-state={isActive ? 'open' : 'closed'}
       aria-labelledby={`accordion-trigger-${value}`}>

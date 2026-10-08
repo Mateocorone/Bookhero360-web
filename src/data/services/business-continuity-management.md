@@ -43,7 +43,7 @@ These examples illustrate how continuity playbooks adapt to different industries
 - **Retail & e-commerce** – Keep online platforms running during traffic surges or failures.
 - **Technology firms** – Safeguard against cyber incidents and system downtime.
 
-![Service images](/images/ns-img-dark-217.jpg)
+![Service images](/images/ns-img-616.png)
 
 ## Built-in assurance and recovery
 

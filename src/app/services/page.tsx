@@ -1,30 +1,29 @@
-import Features from '@/components/services/Features';
-import Pricing from '@/components/services/Pricing';
+import Feature from '@/components/services/Feature';
+import Integration from '@/components/services/Integration';
 import Services from '@/components/services/Services';
-import Solutions from '@/components/services/Solutions';
+import UseCases from '@/components/services/UseCases';
 import CTA from '@/components/shared/cta/CTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Services - Digital Marketing || NextSaaS',
+  title: 'Services - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
   return (
-    <main className="bg-background-1 dark:bg-background-6">
+    <main className="bg-background-3 dark:bg-background-7">
       <Services />
-      <Features />
-      <Solutions />
-      <Pricing />
+      <Integration />
+      <UseCases />
+      <Feature />
       <CTA
         className="dark:bg-background-6 bg-white"
         badgeClass="hidden"
         ctaHeading="Build a complete website using the"
         spanText="assistance"
         description="Start your free trial today and see your ideas come to life easily and creatively."
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
       />
     </main>

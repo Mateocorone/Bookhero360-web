@@ -1,11 +1,11 @@
-import Content from '@/components/change-log/content';
-import Hero from '@/components/change-log/hero';
+import Content from '@/components/change-log/Content';
+import Hero from '@/components/change-log/Hero';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Changelog - Digital Marketing || NextSaaS',
+  title: 'Changelog - Financial Management Platform || NextSaaS',
 };
 
 const Changelog = () => {

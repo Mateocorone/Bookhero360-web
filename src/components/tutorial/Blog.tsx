@@ -1,6 +1,6 @@
 import { TabProvider } from '@/context/TabContext';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+import LinkButton from '../ui/button/Button';
 import BlogTabContent from './BlogTabContent';
 import BlogTabList from './BlogTabList';
 
@@ -15,7 +15,7 @@ const Blog = () => {
           </TabProvider>
           <RevealAnimation delay={0.2}>
             <div className="mt-14 text-center">
-              <LinkButton href="/blog" className="btn btn-secondary dark:btn-transparent hover:btn-primary btn-md">
+              <LinkButton href="/blog" className="btn-v3-lg btn-v3-secondary mx-auto">
                 Explore the blog
               </LinkButton>
             </div>

@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Career - Digital Marketing || NextSaaS',
+  title: 'Career - Financial Management Platform || NextSaaS',
 };
 
 const Career = () => {
@@ -22,7 +22,6 @@ const Career = () => {
         badgeText="Get Started"
         ctaHeading="Ready to start earning with NextSaaS?"
         description="If you have any questions, feel free to reach out to our team."
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
       />
     </main>

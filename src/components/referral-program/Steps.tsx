@@ -1,6 +1,6 @@
 import { cn } from '@/utils/cn';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+import LinkButton from '../ui/button/Button';
 import StepCard, { StepCardProps } from './StepCard';
 import StepDirection from './StepDirection';
 

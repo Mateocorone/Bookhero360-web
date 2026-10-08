@@ -1,13 +1,13 @@
-import Clients from '@/components/success-stories/clients';
+import Clients from '@/components/success-stories/Clients';
 import GlobalStoriesPerformance from '@/components/success-stories/GlobalStoriesPerformance';
-import Hero from '@/components/success-stories/Hero';
+import Hero from '@/components/success-stories/hero';
 import SpotlightStories from '@/components/success-stories/SpotlightStories';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Success Stories - Digital Marketing || NextSaaS',
+  title: 'Success Stories - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {

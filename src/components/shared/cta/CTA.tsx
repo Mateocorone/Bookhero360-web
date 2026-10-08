@@ -9,7 +9,6 @@ interface CTAProps {
   ctaHeading?: string;
   spanText?: string;
   description?: string;
-  btnClass?: string;
   ctaBtnText?: string;
   badgeText?: string;
   descriptionClass?: string;
@@ -25,7 +24,6 @@ const CTA = ({
   ctaHeading,
   spanText,
   description,
-  btnClass,
   ctaBtnText,
   badgeText,
   descriptionClass,
@@ -61,11 +59,8 @@ const CTA = ({
           </div>
           {/* newsletter form  */}
           <div
-            className={cn(
-              'w-full max-w-[562px] space-y-6 lg:pl-9 xl:pl-[96px]',
-              badgeText && 'mt-[40px] space-y-6 lg:mt-[67px]',
-            )}>
-            <CtaInputForm btnClass={btnClass} ctaBtnText={ctaBtnText} inputFieldClass={inputFieldClass} />
+            className={cn('w-full max-w-[562px] space-y-6 lg:pl-9', badgeText && 'mt-[40px] space-y-6 lg:mt-[67px]')}>
+            <CtaInputForm ctaBtnText={ctaBtnText} inputFieldClass={inputFieldClass} />
             <CTACheckList
               className="gap-x-4 gap-y-5 sm:gap-x-6 sm:gap-y-0 xl:justify-start"
               ctaCheckListData={[
@@ -87,5 +82,5 @@ const CTA = ({
     </section>
   );
 };
-CTA.displayName = 'CTA';
+
 export default CTA;

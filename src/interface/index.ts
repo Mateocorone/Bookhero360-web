@@ -12,6 +12,7 @@ export interface IBlogPost {
   slug: string;
   content: string;
   featured?: boolean;
+  showHomePage?: boolean;
 }
 
 export interface IBlogContent {
@@ -22,25 +23,6 @@ export interface IBlogContent {
   orig: Buffer;
   language: string;
   matter: string;
-}
-
-export interface ICaseStudy {
-  title: string;
-  thumbnail: string;
-  description: string;
-  result: string;
-  slug: string;
-  showHomePage?: boolean;
-  content: string;
-  before: string[];
-  after: string[];
-  keyFeatures: string[];
-  userReview: {
-    userName: string;
-    userImage: string;
-    userRole: string;
-    reviewText: string;
-  };
 }
 
 export interface IPosition {

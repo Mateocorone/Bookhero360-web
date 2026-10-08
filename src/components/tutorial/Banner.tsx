@@ -1,7 +1,7 @@
 import learnBanner from '@public/images/ns-img-385.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+import LinkButton from '../ui/button/Button';
 
 const Banner = () => {
   return (
@@ -23,9 +23,7 @@ const Banner = () => {
             </div>
             <RevealAnimation delay={0.3} instant>
               <div>
-                <LinkButton
-                  href="/services"
-                  className="btn btn-primary btn-xl hover:btn-secondary dark:hover:btn-accent">
+                <LinkButton href="/services" className="btn-v3-lg btn-v3-primary mx-auto lg:mx-0">
                   Explore the platform
                 </LinkButton>
               </div>

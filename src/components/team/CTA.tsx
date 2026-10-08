@@ -1,11 +1,12 @@
 import { CheckIcon } from '@/icons';
 import RevealAnimation from '../animation/RevealAnimation';
+import SubmitButton from '../ui/button/SubmitButton';
 
 const CTA = () => {
   return (
     <section className="bg-background-2 dark:bg-background-6 pt-[120px] pb-[200px]">
       <div className="main-container">
-        <div className="">
+        <div>
           <div className="space-y-3 text-center">
             <RevealAnimation delay={0.1}>
               <span className="badge badge-cyan mb-5 inline-block">Get started</span>
@@ -29,16 +30,13 @@ const CTA = () => {
                   name="email"
                   id="userEmail"
                   placeholder="Enter your email"
-                  className="shadow-1 placeholder:text-secondary/50 border-stroke-1 dark:bg-background-6 text-secondary/60 dark:bg-dark-200 focus:border-primary-500 dark:focus:border-primary-500 focus:ring-primary-500/20 h-12 w-full max-w-[440px] rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus:ring-2 focus:outline-none dark:border-[#31332F] dark:text-white/60 dark:placeholder:text-white/40"
+                  required
+                  className="shadow-1 placeholder:text-secondary/50 border-stroke-1 dark:bg-background-6 text-secondary/60 dark:bg-dark-200 focus:border-primary-500 dark:focus:border-primary-500 focus:ring-primary-500/20 h-13 w-full max-w-[440px] rounded-2xl border px-[18px] py-3 font-normal placeholder:font-normal focus:ring-2 focus:outline-none dark:border-[#31332F] dark:text-white/60 dark:placeholder:text-white/40"
                 />
-                <button
-                  type="submit"
-                  className="btn btn-md btn-primary dark:btn-accent dark:hover:btn-primary border-primary-400 hover:btn-secondary h-12 max-sm:w-full">
-                  <span>Get started</span>
-                </button>
+                <SubmitButton className="btn-v3-lg btn-v3-primary w-full md:w-auto">Get started</SubmitButton>
               </form>
             </RevealAnimation>
-            <ul className="flex items-center justify-center gap-[42px]">
+            <ul className="flex flex-col items-center justify-center gap-y-4 md:flex-row md:gap-x-[42px] md:gap-y-0">
               <RevealAnimation delay={0.2}>
                 <li className="flex items-center justify-center gap-2">
                   <span className="bg-secondary dark:bg-accent flex size-[18px] items-center justify-center rounded-full">

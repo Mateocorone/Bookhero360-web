@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Refund Policy - Digital Marketing || NextSaaS',
+  title: 'Refund Policy - Financial Management Platform || NextSaaS',
 };
 
 const RefundPolicy = () => {
@@ -18,7 +18,6 @@ const RefundPolicy = () => {
         badgeText="Get Started"
         ctaHeading="Ready to start earning with NextSaaS?"
         description="If you have any questions, feel free to reach out to our team."
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
       />
     </main>

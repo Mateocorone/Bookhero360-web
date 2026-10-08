@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Login - Digital Marketing || NextSaaS',
+  title: 'Login - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
@@ -18,7 +18,6 @@ const page = () => {
         badgeText="Get Started"
         ctaHeading="Build a complete website using the assistance"
         description="Start your free trial today and see your ideas come to life easily and creatively."
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
       />
     </main>

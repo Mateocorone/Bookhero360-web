@@ -1,5 +1,5 @@
 import { cn } from '@/utils/cn';
-import gradientBg from '@public/images/ns-img-516.png';
+import gradient28 from '@public/images/ns-img-516.png';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -50,7 +50,7 @@ const ServiceCard = ({ stat, isFirst = false }: ServiceCardProps) => (
       isFirst && 'ml-8',
     )}>
     <figure className="pointer-events-none absolute inset-0 -top-[210%] -right-[160%] -z-10 rotate-[-78deg] transform opacity-0 transition-all duration-1000 ease-in-out select-none group-hover:scale-110 group-hover:opacity-100">
-      <Image src={gradientBg} alt="review-bg" className="h-full w-full object-cover" />
+      <Image src={gradient28} alt="review-bg" className="h-full w-full object-cover" />
     </figure>
     <div className="transform transition-all duration-700 ease-in-out group-hover:translate-y-[4px]">
       <p className="text-secondary/60 dark:text-accent/60 mb-2 text-lg transition-colors duration-700 ease-in-out group-hover:text-white">

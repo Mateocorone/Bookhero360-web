@@ -1,6 +1,6 @@
-# Digital Marketing - Next.js SaaS Template
+# Financial Management Platform - Next.js SaaS Template
 
-A modern, production-ready Next.js 16 SaaS template built for digital marketing agencies and businesses. Features a complete set of pages, components, and functionality with React 19, TypeScript, Tailwind CSS 4, and cutting-edge web technologies.
+A modern, production-ready Next.js 16 SaaS template built for financial management platforms and fintech solutions. Features a complete set of pages, components, and functionality with React 19, TypeScript, Tailwind CSS 4, and cutting-edge web technologies.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.0.8-black)
 ![React](https://img.shields.io/badge/React-19.2.1-blue)
@@ -12,31 +12,27 @@ A modern, production-ready Next.js 16 SaaS template built for digital marketing 
 ## 📦 What's Included
 
 - ✅ **Complete Source Code** - Full Next.js 16 project with App Router
-- ✅ **48 Pages** - Comprehensive page collection for digital marketing businesses
-- ✅ **220+ Components** - Reusable React components with TypeScript
+- ✅ **40+ Pages** - Comprehensive page collection for financial management SaaS businesses
+- ✅ **200+ Components** - Reusable React components with TypeScript
 - ✅ **Markdown Support** - Blog posts, whitepapers, case studies, services, and more
 - ✅ **Responsive Design** - Mobile-first approach
 - ✅ **SEO Optimized** - Built-in metadata and optimization
-- ✅ **Dark/Light Mode** - Theme switching with next-themes
 
 ### ⚡ **Performance & Developer Experience**
 
 - **Next.js 16**: Latest features with Turbopack support
 - **TypeScript**: Full type safety and better developer experience
 - **Component Architecture**: Reusable, modular components
-- **Code Quality**: ESLint, Prettier, and Husky pre-commit hooks
-- **Conventional Commits**: Structured commit messages with Commitlint
+- **Code Quality**: ESLint and Prettier
 - **Markdown Content**: Easy content management with gray-matter
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 16.0.0 with App Router
+- **Framework**: Next.js 16.0.8 with App Router
 - **Language**: TypeScript 5.0
-- **UI Library**: React 19.2.0
+- **UI Library**: React 19.2.1
 - **Styling**: Tailwind CSS 4.0
 - **Animations**: GSAP 3.13.0, Lenis 1.3.8
-- **Carousel**: Swiper 11.2.10
-- **Maps**: Leaflet with React-Leaflet
 - **Icons**: Custom icon font system
 
 ## 📋 Prerequisites
@@ -59,7 +55,7 @@ npm install
 yarn install
 ```
 
-### 2. Start Development Server
+### 3. Start Development Server
 
 ```bash
 # Using npm
@@ -74,16 +70,13 @@ The application will be available at `http://localhost:3000`
 ## 📁 Project Structure
 
 ```
-ns-digital-marketing-next/
+financial-management-platform/
 ├── public/                     # Static assets
-│   ├── images/                 # Images (301 files: PNG, SVG, JPG)
-│   │   ├── badge/              # Badge images
-│   │   ├── icons/              # Icon images
-│   │   └── shared/             # Shared logo images
+│   ├── images/                 # Images (266 files: PNG, SVG, JPG)
 │   ├── fonts/                  # Custom icon fonts (EOT, SVG, TTF, WOFF)
 │   └── video/                  # Video assets (MP4)
 ├── src/
-│   ├── app/                    # Next.js 16 App Router (48 pages)
+│   ├── app/                    # Next.js 16 App Router
 │   │   ├── about/              # About page
 │   │   ├── affiliate-policy/   # Affiliate policy page
 │   │   ├── affiliates/         # Affiliates program page
@@ -104,8 +97,7 @@ ns-digital-marketing-next/
 │   │   ├── faq/                # FAQ page
 │   │   ├── features/           # Features page
 │   │   ├── gdpr/               # GDPR page
-│   │   ├── glossary/           # Glossary pages
-│   │   │   └── [slug]/         # Dynamic glossary pages
+│   │   ├── glossary/           # Glossary page
 │   │   ├── integration/        # Integration page
 │   │   ├── legal/              # Legal notice page
 │   │   ├── login/              # Login page
@@ -135,14 +127,14 @@ ns-digital-marketing-next/
 │   │   ├── layout.tsx          # Root layout component
 │   │   ├── not-found.tsx       # 404 page
 │   │   └── page.tsx            # Homepage
-│   ├── components/             # React components (220+)
-│   │   ├── about/              # About page components (6)
+│   ├── components/             # React components (200+)
+│   │   ├── about/              # About page components (8)
 │   │   ├── affiliate-policy/   # Affiliate policy components (2)
 │   │   ├── affiliates/         # Affiliates components (4)
 │   │   ├── analytics/          # Analytics components (3)
 │   │   ├── animation/          # Animation components (2)
-│   │   ├── authentication/     # Auth components (4)
-│   │   ├── blog/               # Blog components (4)
+│   │   ├── authentication/     # Auth components (3)
+│   │   ├── blog/               # Blog components (8)
 │   │   ├── blog-details/       # Blog detail components (3)
 │   │   ├── brand-kit/          # Brand kit components (2)
 │   │   ├── career/             # Career components (6)
@@ -156,14 +148,13 @@ ns-digital-marketing-next/
 │   │   ├── faq/                # FAQ components (8)
 │   │   ├── features/           # Features components (4)
 │   │   ├── gdpr/               # GDPR components (1)
-│   │   ├── glossary/           # Glossary components (5)
-│   │   ├── glossary-details/   # Glossary detail components (2)
-│   │   ├── home/               # Homepage components (9)
+│   │   ├── glossary/           # Glossary components (3)
+│   │   ├── home/               # Homepage components (12)
 │   │   ├── integration/        # Integration components (1)
 │   │   ├── legal-notice/       # Legal notice components (2)
 │   │   ├── our-manifesto/      # Manifesto components (2)
 │   │   ├── press/              # Press components (5)
-│   │   ├── pricing/            # Pricing components (4)
+│   │   ├── pricing/            # Pricing components (3)
 │   │   ├── privacy/            # Privacy components (1)
 │   │   ├── process/            # Process components (2)
 │   │   ├── referral-program/   # Referral components (5)
@@ -171,8 +162,7 @@ ns-digital-marketing-next/
 │   │   ├── security-compliance/# Security components (2)
 │   │   ├── service-details/    # Service detail components (3)
 │   │   ├── services/           # Services components (4)
-│   │   ├── shared/             # Shared/reusable components (30+)
-│   │   │   ├── card/           # Card components
+│   │   ├── shared/             # Shared/reusable components (34)
 │   │   │   ├── cta/            # CTA components
 │   │   │   ├── footer/         # Footer components
 │   │   │   ├── mobile-menu/    # Mobile menu components
@@ -186,7 +176,7 @@ ns-digital-marketing-next/
 │   │   ├── terms-conditions/   # Terms components (1)
 │   │   ├── testimonial/        # Testimonial page components (3)
 │   │   ├── tutorial/           # Tutorial components (9)
-│   │   ├── ui/                 # Core UI components (12)
+│   │   ├── ui/                 # Core UI components (9)
 │   │   ├── use-case/           # Use case components (3)
 │   │   ├── white-paper/        # Whitepaper components (5)
 │   │   ├── whitepaper-details/ # Whitepaper detail components (4)
@@ -197,21 +187,18 @@ ns-digital-marketing-next/
 │   │   ├── ModalContext.tsx
 │   │   └── TabContext.tsx
 │   ├── data/                   # Static data and content
-│   │   ├── blogs/              # 28 Markdown blog posts
+│   │   ├── blogs/              # 31 Markdown blog posts
 │   │   ├── career/             # 6 Markdown job listings
 │   │   ├── case-study/         # 16 Markdown case studies
 │   │   ├── customer/           # 11 Markdown customer stories
-│   │   ├── services/           # 20 Markdown service descriptions
+│   │   ├── services/           # 9 Markdown service descriptions
 │   │   ├── team/               # 16 Markdown team member profiles
 │   │   ├── whitepaper/         # 13 Markdown whitepapers
 │   │   ├── json/               # JSON data files
 │   │   │   ├── changelog/      # Changelog data
 │   │   │   ├── faq/            # FAQ data
 │   │   │   ├── glossary/       # Glossary data
-│   │   │   ├── pricing/        # Pricing data
-│   │   │   ├── team/           # Team data
 │   │   │   └── testimonials/   # Testimonials data
-│   │   ├── achievements.ts     # Achievement stats data
 │   │   ├── faq.ts              # FAQ data
 │   │   ├── footer-data.ts      # Footer links data
 │   │   └── navbar-data.ts      # Navigation menu data
@@ -248,18 +235,22 @@ ns-digital-marketing-next/
 │       ├── getMarkDownContent.ts
 │       ├── getMarkDownData.ts
 │       └── springer.ts         # Animation springs
-├── commitlint.config.cjs       # Commitlint configuration
 ├── eslint.config.mjs           # ESLint configuration
 ├── next.config.ts              # Next.js configuration
 ├── postcss.config.mjs          # PostCSS configuration
 ├── tsconfig.json               # TypeScript configuration
 ├── package.json                # Dependencies and scripts
+├── DEVELOPMENT.md              # Development guide
 └── README.md                   # This file
 ```
 
 ## 🔧 Development
 
 ### Available Scripts
+
+The following scripts are available in `package.json`:
+
+#### Using npm
 
 ```bash
 # Development
@@ -272,6 +263,39 @@ npm run lint         # Run ESLint
 npm run lint:fix     # Fix ESLint issues
 npm run format       # Format code with Prettier
 npm run format:check # Check code formatting
+
+```
+
+#### Using yarn
+
+```bash
+# Development
+yarn dev          # Start development server with Turbopack
+yarn build        # Build for production
+yarn start        # Start production server
+
+# Code Quality
+yarn lint         # Run ESLint
+yarn lint:fix     # Fix ESLint issues
+yarn format       # Format code with Prettier
+yarn format:check # Check code formatting
+
+```
+
+#### Using bun
+
+```bash
+# Development
+bun run dev          # Start development server with Turbopack
+bun run build        # Build for production
+bun run start        # Start production server
+
+# Code Quality
+bun run lint         # Run ESLint
+bun run lint:fix     # Fix ESLint issues
+bun run format       # Format code with Prettier
+bun run format:check # Check code formatting
+
 ```
 
 ### Code Quality Tools
@@ -280,9 +304,6 @@ This project uses several tools to maintain code quality:
 
 - **ESLint 9**: JavaScript/TypeScript linting
 - **Prettier 3**: Code formatting with Tailwind CSS plugin
-- **Husky**: Git hooks for pre-commit checks
-- **lint-staged**: Run linters on staged files only
-- **Commitlint**: Enforce conventional commit messages
 
 ## 🎨 Customization
 
@@ -297,8 +318,8 @@ This project uses several tools to maintain code quality:
 
 | Content Type    | Location                      | Count |
 | --------------- | ----------------------------- | ----- |
-| Blog Posts      | `src/data/blogs/`             | 28    |
-| Services        | `src/data/services/`          | 20    |
+| Blog Posts      | `src/data/blogs/`             | 31    |
+| Services        | `src/data/services/`          | 9     |
 | Team Members    | `src/data/team/`              | 16    |
 | Case Studies    | `src/data/case-study/`        | 16    |
 | Whitepapers     | `src/data/whitepaper/`        | 13    |
@@ -310,7 +331,6 @@ This project uses several tools to maintain code quality:
 | Changelog       | `src/data/json/changelog/`    | -     |
 | Glossary        | `src/data/json/glossary/`     | -     |
 | Testimonials    | `src/data/json/testimonials/` | -     |
-| Pricing         | `src/data/json/pricing/`      | -     |
 
 ### Adding New Pages
 
@@ -329,7 +349,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'New Page - Digital Marketing',
+  title: 'New Page - Financial Management Platform',
   description: 'Description of the new page',
 };
 
@@ -371,7 +391,6 @@ npm run start
 - **Static Generation**: Pre-rendered pages for better performance
 - **SEO Optimization**: Built-in metadata and Open Graph support
 - **Turbopack**: Fast development builds
-- **Smooth Scrolling**: Lenis integration for smooth scroll experiences
 
 ## 🚀 Deployment
 
@@ -415,11 +434,11 @@ The project can be deployed to:
 
 For support and questions:
 
-- **Email**: [hello@staticmania.com](mailto:hello@staticmania.com)
+- **Email**: [hello@pixel71.com](mailto:hello@pixel71.com)
 - **Response Time**: Within 24 hours on business days
 
 ---
 
-**Made with ❤️ by [StaticMania](mailto:hello@staticmania.com)**
+**Made with ❤️ by [Pixel71](mailto:hello@pixel71.com)**
 
 _Happy coding!_

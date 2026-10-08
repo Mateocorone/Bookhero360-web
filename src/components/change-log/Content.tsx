@@ -1,8 +1,8 @@
 'use client';
 import changeLogData from '@/data/json/changelog/changelog.json';
 import { useEffect, useRef, useState } from 'react';
-import Card from './card';
-import TOC from './toc';
+import Card from './Card';
+import TOC from './TOC';
 
 export interface ChangelogItem {
   id: string;

@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Team Details - Digital Marketing || NextSaaS',
+  title: 'Team Details - Financial Management Platform || NextSaaS',
 };
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -23,7 +23,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         description="Start your free trial today and experience the power of NexSaaS—where efficiency meets innovation."
         descriptionClass="max-w-[530px] text-accent/60"
         ctaBtnText="Get started"
-        btnClass="btn-md btn-primary hover:btn-white h-12 w-full max-[376px]:w-[97%%] md:w-auto"
         listTextClass="text-tagline-2 text-accent dark:text-accent/60"
         inputFieldClass="border-0 px-[18px] shadow-1 h-12 py-3 placeholder:text-accent/60 rounded-full focus:outline-1 text-accent focus:outline-primary-600 dark:focus:outline-primary-400 bg-accent/5 lg:max-w-[340px] md:w-[71%] w-full dark:border-stroke-7 dark:placeholder:text-accent/60 placeholder:font-normal font-normal"
         checkListVariant="gray"

@@ -1,5 +1,5 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
-import LinkButton from '@/components/ui/button/LinkButton';
+import LinkButton from '@/components/ui/button/Button';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import gradientBg from '@public/images/ns-img-498.png';
 import { Metadata } from 'next';
@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: '404 - Digital Marketing || NextSaaS',
+  title: '404 - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
@@ -38,7 +38,7 @@ const page = () => {
               </RevealAnimation>
               <RevealAnimation delay={0.6} instant>
                 <div>
-                  <LinkButton href="/" className="btn btn-lg btn-primary hover:btn-secondary dark:hover:btn-accent">
+                  <LinkButton href="/" className="btn-v3-lg btn-v3-secondary">
                     Go to Home
                   </LinkButton>
                 </div>

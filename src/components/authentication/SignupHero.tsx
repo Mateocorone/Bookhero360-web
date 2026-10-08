@@ -1,16 +1,16 @@
-import SignupBgImage from '@public/images/ns-img-374.jpg';
+import SignupBgImage from '@public/images/ns-img-373.jpg';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
-import SocialAuthV2 from './SocialAuthV2';
+import SocialAuth from './SocialAuth';
 
 const SignupHero = () => {
   return (
     <section className="pt-[120px] pb-[70px] lg:pt-[180px] lg:pb-[100px]">
       <div className="main-container">
-        <div className="mx-auto w-full max-w-[400px] lg:max-w-[930px]">
-          <div className="flex items-center overflow-hidden rounded-[20px] bg-white py-2.5 pr-2.5 md:rounded-4xl lg:gap-16 dark:bg-black">
+        <div className="mx-auto w-full max-w-[1120px]">
+          <div className="flex items-stretch justify-center gap-16">
             <RevealAnimation delay={0.1}>
-              <div className="w-full px-8 py-14 lg:max-w-[400px]">
+              <div className="bg-background-1 dark:bg-background-6 mx-auto w-full max-w-[400px] rounded-[20px] px-8 py-14">
                 <form>
                   <fieldset className="mb-4 space-y-2">
                     <label
@@ -41,7 +41,7 @@ const SignupHero = () => {
                       placeholder="At least 8 characters"
                     />
                   </fieldset>
-                  <fieldset className="mb-8 space-y-2">
+                  <fieldset className="mb-3 space-y-2">
                     <label
                       htmlFor="confirm-password"
                       className="text-tagline-2 text-secondary dark:text-accent block font-medium select-none">
@@ -54,11 +54,11 @@ const SignupHero = () => {
                       placeholder="Re-enter your password"
                     />
                   </fieldset>
-                  <div>
+                  <div className="mt-8">
                     <button
                       type="submit"
                       className="btn btn-md btn-primary hover:btn-secondary dark:hover:btn-accent w-full first-letter:uppercase before:content-none">
-                      Sign Up
+                      Sign up
                     </button>
                   </div>
                 </form>
@@ -66,13 +66,13 @@ const SignupHero = () => {
                   <p className="text-tagline-2 text-secondary dark:text-accent font-normal">Or</p>
                 </div>
                 <div>
-                  <SocialAuthV2 />
+                  <SocialAuth />
                 </div>
               </div>
             </RevealAnimation>
             <RevealAnimation delay={0.2} direction="up">
               <div className="hidden lg:block">
-                <figure className="h-[665px] w-full max-w-[456px] overflow-hidden rounded-[20px]">
+                <figure className="h-full max-h-[864px] w-full max-w-[656px] overflow-hidden rounded-[20px]">
                   <Image src={SignupBgImage} alt="login-bg" className="size-full object-cover" />
                 </figure>
               </div>

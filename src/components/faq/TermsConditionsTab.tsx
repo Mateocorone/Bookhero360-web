@@ -41,11 +41,7 @@ const faqData = [
 
 const TermsConditionsTab = () => {
   return (
-    <Accordion
-      className="mx-auto w-full max-w-[850px] space-y-4"
-      defaultValue="1"
-      enableScrollAnimation={true}
-      animationDelay={0.1}>
+    <Accordion className="mx-auto w-full max-w-[850px] space-y-4" defaultValue="1">
       {faqData.map((item) => (
         <AccordionItem
           className="dark:bg-background-7 rounded-[20px] bg-white px-6 sm:px-8"
@@ -58,7 +54,11 @@ const TermsConditionsTab = () => {
             iconType="arrow">
             {item.question}
           </AccordionTrigger>
-          <AccordionContent value={item.id.toString()}>{item.answer}</AccordionContent>
+          <AccordionContent
+            value={item.id.toString()}
+            className="border-t-stroke-2 dark:border-t-stroke-6 overflow-hidden border-t data-[state=open]:pt-6 data-[state=open]:pb-8">
+            <p>{item.answer}</p>
+          </AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>

@@ -3,7 +3,6 @@
 import BrandMark from '@/components/brand/BrandMark';
 import Icon, { IconName } from '@/components/brand/Icon';
 import { cn } from '@/utils/cn';
-import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { AppSkeleton } from './AppSkeleton';
 import { FormEvent, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -201,9 +200,6 @@ const BookheroApp = () => {
   const [query, setQuery] = useState('');
   const [toast, setToast] = useState('');
   const [loading, setLoading] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
-  const [themeReady, setThemeReady] = useState(false);
-  useEffect(() => setThemeReady(true), []);
   const viewTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const toastTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
@@ -716,22 +712,7 @@ const BookheroApp = () => {
           <div className="hidden xl:block" />
           <div className="flex items-center gap-2">
             <span className="border-stroke-3 dark:border-stroke-7 text-tagline-2 hidden items-center gap-2 rounded-full border px-4 py-2 sm:flex"><Icon name="calendar" className="size-4" />{dateLabel}</span>
-            <button
-              type="button"
-              aria-label="Cambiar entre tema claro y oscuro"
-              onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-              className="border-stroke-3 dark:border-stroke-7 text-secondary dark:text-accent flex size-10 cursor-pointer items-center justify-center rounded-full border transition hover:scale-105">
-              {themeReady && resolvedTheme === 'dark' ? (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-5">
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-                </svg>
-              ) : (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-5">
-                  <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
-                </svg>
-              )}
-            </button>
+            
             <button type="button" aria-label="Notificaciones" onClick={() => go('emails')} className="border-stroke-3 dark:border-stroke-7 text-secondary dark:text-accent flex size-10 cursor-pointer items-center justify-center rounded-full border"><Icon name="bell" /></button>
           </div>
         </header>

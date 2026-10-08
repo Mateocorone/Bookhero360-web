@@ -1,8 +1,8 @@
 import nsImg336 from '@public/images/ns-img-336.svg';
 import nsImg337 from '@public/images/ns-img-337.svg';
 import Image from 'next/image';
-import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/Button';
 
 // why choose us cta
 
@@ -39,13 +39,11 @@ const CTA = () => {
             </div>
             <ul className="mx-auto flex flex-col items-center justify-center gap-4 max-md:w-full md:mx-0 md:w-auto md:flex-row">
               <RevealAnimation delay={0.3} direction="left" offset={50}>
-                <li className="w-[90%] list-none sm:w-auto">
-                  <Link
-                    href="contact"
-                    className="btn btn-secondary hover:btn-primary dark:hover:btn-primary dark:btn-accent btn-lg md:btn-xl mx-auto w-full md:mx-0 md:w-auto">
-                    <span>Get started</span>
-                  </Link>
-                </li>
+                <div>
+                  <LinkButton href="/pricing" className="btn-v3-lg btn-v3-secondary">
+                    Get started
+                  </LinkButton>
+                </div>
               </RevealAnimation>
             </ul>
           </div>

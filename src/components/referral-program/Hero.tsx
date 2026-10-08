@@ -2,8 +2,8 @@
 import { StarIconV2 } from '@/icons';
 import logo from '@public/images/shared/logo.svg';
 import Image from 'next/image';
-import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/Button';
 
 const Hero = () => {
   return (
@@ -18,11 +18,9 @@ const Hero = () => {
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <div className="group mx-auto w-[90%] list-none pt-7 pb-6 md:inline-block md:w-auto lg:pt-14">
-              <Link
-                href="/customer"
-                className="btn btn-secondary hover:btn-primary dark:btn-white btn-lg md:btn-xl dark:hover:btn-primary mx-auto w-full md:mx-0 md:w-auto">
-                <span>Read customer stories</span>
-              </Link>
+              <LinkButton href="/customer" className="btn-v3-lg btn-v3-secondary mx-auto">
+                Read customer stories
+              </LinkButton>
             </div>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>

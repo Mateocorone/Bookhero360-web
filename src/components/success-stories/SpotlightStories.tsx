@@ -7,45 +7,41 @@ import nsAvatar20 from '@public/images/ns-avatar-20.png';
 import nsAvatar21 from '@public/images/ns-avatar-21.png';
 import nsAvatar23 from '@public/images/ns-avatar-23.png';
 import Image from 'next/image';
-import Link from 'next/link';
 import NumberAnimation from '../animation/NumberAnimation';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+import LinkButton from '../ui/button/Button';
 
 const SpotlightStories = () => {
   return (
     <section className="py-12 md:py-18 lg:pb-24 xl:py-28" aria-label="spotlight stories section">
       <div className="main-container space-y-17.5">
-        <div className="flex flex-col items-center justify-center space-y-8 md:flex-row md:justify-between md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-8 gap-y-6 md:justify-between md:space-y-0 lg:flex-row lg:gap-y-0">
           <div>
             <RevealAnimation delay={0.1}>
               <h2>Spotlight Stories</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.2}>
-              <p>Real results from real teams</p>
+              <p className="text-center lg:text-left">Real results from real teams</p>
             </RevealAnimation>
           </div>
           {/* btns */}
-          <ul className="flex flex-col items-center justify-start gap-x-4 gap-y-3 max-md:w-full md:flex-row md:gap-y-0">
-            <li className="w-[90%] md:w-auto">
-              <RevealAnimation delay={0.3} direction="left" offset={70}>
-                <Link
-                  href={'/customer'}
-                  className="btn btn-secondary hover:btn-primary dark:btn-white dark:hover:btn-primary btn-lg md:btn-xl mx-auto w-full md:mx-0 md:w-auto">
-                  <span>Read customer stories</span>
-                </Link>
-              </RevealAnimation>
-            </li>
-            <li className="w-[90%] list-none md:w-auto">
-              <RevealAnimation delay={0.4} direction="left" offset={70}>
-                <Link
-                  href={'/contact-us'}
-                  className="btn btn-ash hover:btn-secondary dark:btn-primary dark:hover:btn-accent btn-lg md:btn-xl mx-auto w-full border-0 md:mx-0 md:w-auto">
-                  <span>Share your story</span>
-                </Link>
-              </RevealAnimation>
-            </li>
-          </ul>
+          <div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 max-md:w-full sm:flex-row md:justify-start md:gap-y-0">
+            <RevealAnimation delay={0.3} direction="left" offset={70}>
+              <div className="w-4/5 md:w-auto">
+                <LinkButton href={'/customer'} className="btn-v3-lg btn-v3-secondary w-full sm:w-auto">
+                  Read customer stories
+                </LinkButton>
+              </div>
+            </RevealAnimation>
+
+            <RevealAnimation delay={0.4} direction="left" offset={70}>
+              <div className="w-4/5 md:w-auto">
+                <LinkButton href={'/contact-us'} className="btn-v3-lg btn-v3-stone w-full sm:w-auto">
+                  Share your story
+                </LinkButton>
+              </div>
+            </RevealAnimation>
+          </div>
         </div>
         {/* stories */}
         <article className="flex flex-col items-center justify-center gap-5 lg:flex-row lg:gap-2">
@@ -89,10 +85,8 @@ const SpotlightStories = () => {
                 <p className="text-secondary dark:text-accent pt-16 pb-8">
                   SoundWave Studios boosts video output by 40% using AI-generated voices.
                 </p>
-                <div className="w-[90%] md:w-auto">
-                  <LinkButton
-                    href="case-study/ai-powered-patient-care-solutions-in-healthcare"
-                    className="btn btn-secondary hover:btn-primary dark:btn-accent dark:hover:btn-primary btn-lg mx-auto w-full md:mx-0 md:w-auto">
+                <div>
+                  <LinkButton href="#" className="btn-v3-lg btn-v3-secondary">
                     Read now
                   </LinkButton>
                 </div>
@@ -175,10 +169,8 @@ const SpotlightStories = () => {
                 <p className="pt-5 pb-8 text-white">
                   SoundWave Studios boosts video output by 40% using AI-generated voices.
                 </p>
-                <div className="w-[90%] md:w-auto">
-                  <LinkButton
-                    href="case-study/bright-path-customer-engagement-and-retention"
-                    className="btn btn-white-v2 hover:btn-primary dark:btn-accent dark:hover:btn-primary btn-lg mx-auto w-full md:mx-0 md:w-auto">
+                <div>
+                  <LinkButton href="#" className="btn-v3-lg btn-v3-white">
                     Read now
                   </LinkButton>
                 </div>

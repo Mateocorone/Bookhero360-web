@@ -14,14 +14,14 @@ const StepCard = ({ id, stepNumber, title, description, className }: StepCardPro
       className={cn('col-span-12 w-full space-y-24 rounded-[20px] p-6 md:col-span-4 md:p-10.5', className)}
       itemType="https://schema.org/HowToStep"
       id={id}>
-      <h3 className="text-heading-3 dark:text-secondary" itemProp="position" aria-label="Step 1">
+      <h3 className="text-heading-3" itemProp="position" aria-label="Step 1">
         {stepNumber}
       </h3>
       <div className="space-y-1">
-        <h4 className="text-heading-5 dark:text-secondary" itemProp="name">
+        <h4 className="text-heading-5" itemProp="name">
           {title}
         </h4>
-        <p className="dark:text-secondary max-w-[222px]" itemProp="text">
+        <p className="max-w-[222px]" itemProp="text">
           {description}
         </p>
       </div>
@@ -29,4 +29,5 @@ const StepCard = ({ id, stepNumber, title, description, className }: StepCardPro
   );
 };
 
+StepCard.displayName = 'StepCard';
 export default StepCard;

@@ -14,8 +14,8 @@ import vlWhite from '@public/images/icons/vl-white.svg';
 import vl from '@public/images/icons/vl.svg';
 import gradient16 from '@public/images/ns-img-508.png';
 import Image from 'next/image';
-import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/Button';
 
 const Integration = () => {
   return (
@@ -44,11 +44,9 @@ const Integration = () => {
         </RevealAnimation>
         <RevealAnimation delay={0.5}>
           <div>
-            <Link
-              href="/pricing"
-              className="btn btn-secondary btn-md dark:btn-accent hover:btn-primary mx-auto inline-block w-[90%] md:mx-0 md:w-auto">
-              <span>See it in Action</span>
-            </Link>
+            <LinkButton href="/pricing" className="btn-v3-lg btn-v3-secondary mx-auto">
+              See it in Action
+            </LinkButton>
           </div>
         </RevealAnimation>
       </div>

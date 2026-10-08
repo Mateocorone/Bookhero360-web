@@ -11,12 +11,12 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Tutorial - Digital Marketing || NextSaaS',
+  title: 'Tutorial - Financial Management Platform || NextSaaS',
 };
 
 const Tutorial = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-5">
+    <main className="bg-background-3 dark:bg-background-5 overflow-x-hidden">
       <Banner />
       <Blog />
       <Features />
@@ -30,7 +30,6 @@ const Tutorial = () => {
         badgeText="Get Started"
         ctaHeading="Ready to start earning with NextSaaS?"
         description="If you have any questions, feel free to reach out to our team."
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
       />
     </main>

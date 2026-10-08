@@ -1,5 +1,5 @@
 import { IPosition } from '@/interface';
-import gradientBg from '@public/images/ns-img-533.png';
+import gradient45 from '@public/images/ns-img-533.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -10,7 +10,7 @@ const JobOverview = ({ data }: { data: Partial<IPosition> }) => {
         {/* bg gradient img  */}
         <RevealAnimation delay={0.4} duration={1.2} direction="right" offset={90}>
           <figure className="pointer-events-none absolute top-[-27%] right-[-77%] size-[500px] overflow-hidden select-none max-[377px]:right-[-90%] md:top-[-27%] md:right-[-83%] lg:top-[-49%] lg:right-[-102%] lg:size-[800px] xl:top-[-60%] xl:right-[-99%] xl:size-[1000px]">
-            <Image src={gradientBg} alt="career-details-bg-gradient-img" className="size-full object-cover" />
+            <Image src={gradient45} alt="career-details-bg-gradient-img" className="size-full object-cover" />
           </figure>
         </RevealAnimation>
         <div className="space-y-8">

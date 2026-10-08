@@ -6,7 +6,7 @@ product: 'analytics'
 service: 'consulting'
 solution: 'enterprise'
 lightImage: '/images/icons/outreach.svg'
-darkImage: '/images/icons/outreach-dark.svg'
+darkImage: '/images/icons/outreach-white.svg'
 alt: 'Outreach'
 detailsTitle: 'How Outreach Improved Sales Productivity with NextSaaS Automation & Intelligence'
 

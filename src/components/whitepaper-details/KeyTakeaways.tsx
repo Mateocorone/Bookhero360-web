@@ -1,7 +1,7 @@
 import { KeyTakeWayItem } from '@/interface';
-import Link from 'next/link';
 import { Fragment } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/Button';
 
 interface KeyTakeWaysProps {
   keyTakeWays: KeyTakeWayItem[];
@@ -36,12 +36,10 @@ const KeyTakeWays = ({ keyTakeWays, keyTakeWaysDescription, paperLink }: KeyTake
           <p className="w-full max-w-3xl">{keyTakeWaysDescription}</p>
           <div className="mt-14">
             <RevealAnimation delay={0.4} direction="left" offset={50} instant>
-              <div className="max-w-max">
-                <Link
-                  href={paperLink}
-                  className="btn btn-secondary hover:btn-primary dark:hover:btn-primary dark:btn-accent btn-lg md:btn-xl mx-auto w-full md:mx-0 md:w-auto">
-                  <span>View whitepaper</span>
-                </Link>
+              <div>
+                <LinkButton href={paperLink} className="btn-v3-lg btn-v3-secondary">
+                  View whitepaper
+                </LinkButton>
               </div>
             </RevealAnimation>
           </div>

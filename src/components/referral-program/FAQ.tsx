@@ -49,30 +49,27 @@ const Faq = () => {
         </RevealAnimation>
 
         {/* faq accordion list   */}
-        <Accordion
-          className="mx-auto mt-10 w-full max-w-[950px] space-y-4 xl:mt-20"
-          defaultValue="1"
-          enableScrollAnimation={true}
-          animationDelay={0.1}>
-          {faqData.map((faq) => (
-            <AccordionItem
-              key={faq.id}
-              className="border-stroke-1 dark:border-stroke-7 rounded-[20px] border"
-              value={faq.id}>
-              <AccordionTrigger
-                iconClassName="size-7 data-[state=open]:bg-secondary dark:data-[state=open]:bg-accent data-[state=open]:text-white dark:data-[state=open]:text-secondary dark:text-secondary data-[state=closed]:bg-ns-green accordion-home-38 rounded-full flex items-center justify-center accordion-arrow transition-colors duration-300 ease-in-out"
-                titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
-                className="flex w-full cursor-pointer items-center justify-between p-4 md:p-6 lg:p-8"
-                value={faq.id}
-                iconType="arrow">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent value={faq.id} className="px-8">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <RevealAnimation delay={0.2}>
+          <div>
+            <Accordion className="mx-auto mt-10 w-full max-w-[950px] space-y-4 xl:mt-20" defaultValue="1">
+              {faqData.map((faq) => (
+                <AccordionItem key={faq.id} className="border-stroke-1 rounded-[20px] border" value={faq.id}>
+                  <AccordionTrigger
+                    iconClassName="size-7 data-[state=open]:bg-secondary data-[state=open]:text-white data-[state=closed]:bg-ns-green accordion-home-38 rounded-full flex items-center justify-center accordion-arrow transition-colors duration-300 ease-in-out"
+                    titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
+                    className="flex w-full cursor-pointer items-center justify-between p-4 md:p-6 lg:p-8"
+                    value={faq.id}
+                    iconType="arrow">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent value={faq.id} className="overflow-hidden px-8 data-[state=open]:pb-8">
+                    <p>{faq.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </RevealAnimation>
       </div>
     </section>
   );

@@ -1,124 +1,268 @@
-import { ArrowIcon } from '@/icons';
-import figmaLogo from '@public/images/icons/figma.svg';
-import shopifyLogo from '@public/images/icons/shopify.svg';
-import slackLogo from '@public/images/icons/slack.svg';
-import snapchatLogo from '@public/images/icons/snapchat.svg';
-import tiktokLogo from '@public/images/icons/tiktok.svg';
-import zapierLogo from '@public/images/icons/zapier.svg';
-import integrationBg from '@public/images/ns-img-24.png';
+import confluence from '@public/images/icons/confluence.svg';
+import edge from '@public/images/icons/edge.svg';
+import figma from '@public/images/icons/figma.svg';
+import framer from '@public/images/icons/framer.svg';
+import gmail from '@public/images/icons/gmail.svg';
+import googleMeet from '@public/images/icons/google-meet.svg';
+import google from '@public/images/icons/google.svg';
+import marvel from '@public/images/icons/marvel.svg';
+import microsoft from '@public/images/icons/microsoft.svg';
+import msYammer from '@public/images/icons/ms_yammer.svg';
+import slack from '@public/images/icons/slack.svg';
+import snapchat from '@public/images/icons/snapchat.svg';
+import vlWhite from '@public/images/icons/vl-white.svg';
+import vl from '@public/images/icons/vl.svg';
 import Image from 'next/image';
-import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
-
-interface Integration {
-  id: string;
-  logo: string;
-  title: string;
-  description: string;
-  href: string;
-}
-
-const integrations: Integration[] = [
-  {
-    id: 'zapier',
-    logo: zapierLogo,
-    title: 'Zapier',
-    description: 'Communication',
-    href: '/pricing',
-  },
-  {
-    id: 'snapchat',
-    logo: snapchatLogo,
-    title: 'Snapchat',
-    description: 'Messaging App',
-    href: '/pricing',
-  },
-  {
-    id: 'shopify',
-    logo: shopifyLogo,
-    title: 'Shopify',
-    description: 'e-commerce',
-    href: '/pricing',
-  },
-  {
-    id: 'figma',
-    logo: figmaLogo,
-    title: 'Figma',
-    description: 'Design Tool',
-    href: '/pricing',
-  },
-  {
-    id: 'slack',
-    logo: slackLogo,
-    title: 'Slack',
-    description: 'Communication',
-    href: '/pricing',
-  },
-  {
-    id: 'tiktok',
-    logo: tiktokLogo,
-    title: 'Tiktok',
-    description: 'Video Tool',
-    href: '/pricing',
-  },
-];
+import LinkButton from '../ui/button/Button';
 
 const Integration = () => {
   return (
-    <section className="pt-36 pb-10 md:pt-42 md:pb-24 xl:pt-[180px] xl:pb-28">
-      <RevealAnimation delay={0.1}>
-        <div className="bg-secondary relative z-0 mx-auto w-[95%] overflow-hidden rounded-4xl px-4 py-10 md:px-10 md:py-16 2xl:max-w-[1440px] 2xl:px-[100px] 2xl:py-[100px]">
-          <div className="absolute inset-0 -z-10 h-full w-full">
-            <Image src={integrationBg} alt=" about bg" className="h-full w-full object-cover" />
-          </div>
-          <div className="mx-auto max-w-[850px]">
-            <div className="mb-14 flex flex-col items-center gap-y-3 text-center md:mb-[70px]">
-              <RevealAnimation delay={0.1}>
-                <span className="badge badge-blur text-ns-cyan mb-5">Integration</span>
-              </RevealAnimation>
-              <RevealAnimation delay={0.2}>
-                <h2 className="text-accent mx-auto max-w-[750px]">Link up with your favorite tools.</h2>
-              </RevealAnimation>
-              <RevealAnimation delay={0.3}>
-                <p className="text-accent/60 max-w-[510px]">
-                  We assist startups in standing out with exceptional messaging that effectively engages their audience.
-                </p>
-              </RevealAnimation>
-            </div>
-            <div className="integration-container mb-10 grid grid-cols-1 gap-8 sm:gap-4 md:mb-14 md:grid-cols-2 md:gap-8">
-              {integrations.map((integration, index) => (
-                <RevealAnimation key={integration.title} delay={0.1 * index + 0.1} instant={index <= 2}>
-                  <div className="group" key={integration.id}>
-                    <Link
-                      href={integration.href}
-                      className="group-hover:shadow-1 flex justify-between rounded-[20px] bg-white/14 p-4 transition-all duration-500 ease-in-out group-hover:scale-[102%] md:p-4 lg:p-8">
-                      <div className="flex items-center gap-4">
-                        <div className="shrink-0 grow-0 rounded-lg bg-white transition-transform duration-500 group-hover:scale-[103%] group-hover:rotate-12">
-                          <Image src={integration.logo} alt={`${integration.title} Logo`} width={56} height={56} />
-                        </div>
-                        <div className="transform transition-transform duration-500 group-hover:translate-x-1.5">
-                          <h5 className="text-accent">{integration.title}</h5>
-                          <p className="text-accent/60">{integration.description}</p>
-                        </div>
-                      </div>
-                      <div className="bg-ns-green group-hover:bg-ns-green/90 group-hover:shadow-1 relative flex size-14 items-center justify-center overflow-hidden rounded-full transition-all duration-[600ms] ease-in-out">
-                        <ArrowIcon className="absolute size-6 -translate-x-11 stroke-black opacity-0 transition-all duration-[600ms] ease-in-out group-hover:translate-x-0 group-hover:opacity-100" />
-                        <ArrowIcon className="absolute size-6 translate-x-0 stroke-black opacity-100 transition-all duration-[600ms] ease-in-out group-hover:translate-x-10 group-hover:opacity-0" />
-                      </div>
-                    </Link>
-                  </div>
-                </RevealAnimation>
-              ))}
-            </div>
-            <RevealAnimation delay={0.7}>
-              <div className="text-center">
-                <LinkButton
-                  href="/services"
-                  className="btn btn-white btn-xl hover:btn-primary dark:btn-transparent block w-[90%] md:inline-block md:w-auto">
-                  See in Action
+    <section className="pt-32 pb-20 sm:pt-36 md:pt-42 md:pb-28 lg:pb-44 xl:pt-[180px] xl:pb-[200px]">
+      <RevealAnimation delay={0.1} offset={80}>
+        <div className="dark:bg-background-6 relative z-10 mx-auto w-[95%] rounded-4xl bg-white px-10 py-[70px] md:min-h-[740px] md:px-[75px] 2xl:max-w-[1440px]">
+          <div className="relative z-10 mx-auto w-fit max-w-[410px] text-center lg:mt-20">
+            <RevealAnimation delay={0.2}>
+              <h2 className="mb-3">
+                Effortless app <br className="hidden lg:block" />
+                integration.
+              </h2>
+            </RevealAnimation>
+            <RevealAnimation delay={0.3}>
+              <p className="mb-14">
+                Seamlessly connect your favorite tools and platforms without the usual hassle. Our solution is designed
+                to make
+              </p>
+            </RevealAnimation>
+            <RevealAnimation delay={0.4}>
+              <div>
+                <LinkButton href="/pricing" className="btn-v3-lg btn-v3-secondary mx-auto">
+                  See it in Action
                 </LinkButton>
               </div>
+            </RevealAnimation>
+          </div>
+          <div className="bottom-0 left-5 hidden lg:absolute lg:top-0 lg:bottom-auto lg:left-10 lg:block lg:w-1/2 lg:max-w-[400px] xl:left-20 2xl:left-0 2xl:max-w-[582px]">
+            <div className="relative flex h-full flex-row flex-wrap gap-5 py-10 lg:flex-col lg:gap-[40px] lg:py-[70px] 2xl:pl-[70px]">
+              <RevealAnimation delay={0.4}>
+                <div className="flex gap-5 lg:ml-[60px] lg:gap-8 xl:ml-[100px] xl:gap-[75px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={googleMeet} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+              <RevealAnimation delay={0.5}>
+                <div className="flex gap-5 lg:gap-8 lg:self-start xl:gap-[75px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={gmail} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={marvel} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+
+              <RevealAnimation delay={0.6}>
+                <div className="flex gap-5 lg:ml-[60px] lg:gap-8 xl:ml-[100px] xl:gap-[75px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={confluence} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={framer} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+              <RevealAnimation delay={0.7}>
+                <div className="flex gap-5 lg:ml-[100px] lg:gap-8 xl:ml-[185px] xl:gap-[75px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={vl} className="size-full dark:hidden" alt="integration icon" />
+                      <Image src={vlWhite} className="hidden size-full dark:block" alt="integration icon" />
+                    </div>
+                  </figure>
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={edge} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+            </div>
+          </div>
+          <div className="right-5 bottom-0 hidden lg:absolute lg:top-0 lg:right-10 lg:bottom-auto lg:block lg:w-1/2 lg:max-w-[400px] xl:right-28 2xl:right-0 2xl:max-w-[582px]">
+            <div className="relative flex h-full flex-row flex-wrap gap-5 py-10 lg:flex-col lg:gap-[40px] lg:py-[70px] 2xl:pr-[70px]">
+              <RevealAnimation delay={0.4}>
+                <div className="flex lg:mr-[60px] lg:self-end xl:mr-[100px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={confluence} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+
+              <RevealAnimation delay={0.5}>
+                <div className="flex gap-8 lg:gap-[50px] lg:self-end xl:gap-[75px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={slack} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={snapchat} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+
+              <RevealAnimation delay={0.6}>
+                <div className="flex gap-8 lg:mr-[60px] lg:gap-[50px] lg:self-end xl:mr-[100px] xl:gap-[75px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={google} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={msYammer} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+
+              <RevealAnimation delay={0.7}>
+                <div className="flex gap-8 self-end lg:mr-[100px] lg:gap-[50px] xl:mr-[185px] xl:gap-[75px]">
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={microsoft} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                  <figure className="bg-background-2 dark:bg-background-7 flex size-[100px] items-center justify-center rounded-full 2xl:size-[120px]">
+                    <div className="dark:bg-background-8 size-[80px] rounded-full bg-white p-6 2xl:size-[100px]">
+                      <Image src={figma} className="size-full" alt="integration icon" />
+                    </div>
+                  </figure>
+                </div>
+              </RevealAnimation>
+            </div>
+          </div>
+
+          {/* mobile view  */}
+          <div className="integration-list-1 mt-8 flex flex-wrap items-center justify-center gap-4 px-6 sm:px-10 md:mt-20 lg:hidden">
+            <RevealAnimation delay={0.4}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={googleMeet} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.4}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={gmail} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+
+            <RevealAnimation delay={0.4}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={marvel} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.4}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={confluence} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.5}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={framer} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.5}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={vl} className="size-full dark:hidden" alt="integration icon" />
+                  <Image src={vlWhite} className="hidden size-full dark:block" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+
+            <RevealAnimation delay={0.5}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={edge} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+
+            <RevealAnimation delay={0.5}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={confluence} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+
+            <RevealAnimation delay={0.6}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={slack} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.6}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={snapchat} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.6}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={google} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.6}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={msYammer} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+
+            <RevealAnimation delay={0.7}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={microsoft} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
+            </RevealAnimation>
+            <RevealAnimation delay={0.7}>
+              <figure className="bg-background-2 dark:bg-background-7 flex size-14 items-center justify-center rounded-full sm:size-[75px]">
+                <div className="dark:bg-background-6 size-10 rounded-full bg-white p-2 sm:size-[60px]">
+                  <Image src={figma} className="size-full" alt="integration icon" />
+                </div>
+              </figure>
             </RevealAnimation>
           </div>
         </div>
@@ -127,5 +271,4 @@ const Integration = () => {
   );
 };
 
-Integration.displayName = 'Integration';
 export default Integration;

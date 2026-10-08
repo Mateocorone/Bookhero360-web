@@ -434,7 +434,7 @@ const UserIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 17 17" fill="none">
     <path
       d="M3.49219 15.0195C3.49219 13.605 4.05409 12.2485 5.05428 11.2483C6.05448 10.2481 7.41103 9.6862 8.82552 9.6862C10.24 9.6862 11.5966 10.2481 12.5968 11.2483C13.597 12.2485 14.1589 13.605 14.1589 15.0195L12.8255 15.0195C12.8255 13.9587 12.4041 12.9412 11.6539 12.1911C10.9038 11.441 9.88639 11.0195 8.82552 11.0195C7.76465 11.0195 6.74724 11.441 5.99709 12.1911C5.24695 12.9412 4.82552 13.9587 4.82552 15.0195L3.49219 15.0195ZM8.82552 9.01953C6.61552 9.01953 4.82552 7.22953 4.82552 5.01953C4.82552 2.80953 6.61552 1.01953 8.82552 1.01953C11.0355 1.01953 12.8255 2.80953 12.8255 5.01953C12.8255 7.22953 11.0355 9.01953 8.82552 9.01953ZM8.82552 7.6862C10.2989 7.6862 11.4922 6.49286 11.4922 5.01953C11.4922 3.5462 10.2989 2.35286 8.82552 2.35286C7.35219 2.35286 6.15885 3.5462 6.15885 5.01953C6.15885 6.49286 7.35219 7.6862 8.82552 7.6862Z"
-      className="fill-[#09121F] dark:fill-accent"
+      className="dark:fill-accent fill-[#09121F]"
     />
   </svg>
 );
@@ -442,7 +442,7 @@ const MessageIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 17 17" fill="none">
     <path
       d="M2.16406 6.34952C2.16371 5.82432 2.26696 5.30421 2.46791 4.81898C2.66885 4.33374 2.96354 3.89291 3.3351 3.52172C3.70665 3.15054 4.14778 2.85629 4.63322 2.65583C5.11865 2.45538 5.63887 2.35264 6.16406 2.35352L11.4974 2.35352C13.7061 2.35352 15.4974 4.15019 15.4974 6.34952L15.4974 14.3535L6.16406 14.3535C3.9554 14.3535 2.16406 12.5569 2.16406 10.3575L2.16406 6.34952ZM14.1641 13.0202L14.1641 6.34952C14.1623 5.64319 13.8807 4.96635 13.3808 4.46727C12.881 3.96819 12.2037 3.68756 11.4974 3.68685L6.16406 3.68685C5.81396 3.68598 5.46713 3.75422 5.14346 3.88767C4.81979 4.02112 4.52565 4.21716 4.2779 4.46453C4.03016 4.7119 3.83368 5.00575 3.69975 5.32922C3.56581 5.65269 3.49704 5.99942 3.4974 6.34952L3.4974 10.3575C3.49916 11.0639 3.78081 11.7407 4.28064 12.2398C4.78046 12.7389 5.45773 13.0195 6.16406 13.0202L14.1641 13.0202ZM10.1641 7.68685L11.4974 7.68685L11.4974 9.02019L10.1641 9.02019L10.1641 7.68685ZM6.16406 7.68685L7.4974 7.68685L7.4974 9.02019L6.16406 9.02019L6.16406 7.68685Z"
-      className="fill-[#09121F] dark:fill-accent"
+      className="dark:fill-accent fill-[#09121F]"
     />
   </svg>
 );
@@ -452,7 +452,7 @@ const TaskIcon = () => (
     <g clipPath="url(#clip0_866_12336)">
       <path
         d="M24.0386 5.65905C24.5822 5.7549 24.9456 6.27389 24.8498 6.81751L24.1974 10.5174L21.8805 12.1397L22.7065 7.45502L8.91919 5.02394L6.14082 20.7809L19.9281 23.2119L20.4071 20.4958L22.724 18.8735L21.7241 24.544C21.6282 25.0877 21.1093 25.4511 20.5656 25.3552L4.80872 22.5768C4.26511 22.481 3.90171 21.962 3.99756 21.4184L7.12323 3.69184C7.21908 3.14823 7.73807 2.78483 8.28168 2.88068L24.0386 5.65905ZM24.6074 12.6724L25.7544 14.3104L16.7439 20.6196L15.3498 20.3718L15.5969 18.9816L24.6074 12.6724ZM15.4085 14.2916L15.0612 16.2612L10.1371 15.393L10.4844 13.4233L15.4085 14.2916ZM19.0575 10.8733L18.7102 12.8429L10.8317 11.4537L11.179 9.48412L19.0575 10.8733Z"
-        className="fill-[#09121F] dark:fill-accent"
+        className="dark:fill-accent fill-[#09121F]"
       />
     </g>
     <defs>
@@ -471,7 +471,7 @@ const TransferSuccessIcon = () => (
     fill="none"
     aria-hidden="true"
     focusable="false"
-    className="stroke-ns-green ">
+    className="stroke-white">
     <path
       d="M13.0703 18.0011L16.6853 21.6311L23.9303 14.3711"
       strokeWidth={2}
@@ -566,7 +566,7 @@ const QuoteIcon = () => (
 );
 
 const NavigationArrow = ({ direction, className }: { direction: 'prev' | 'next'; className?: string }) => (
-  <div className={cn('absolute top-1/2 -translate-y-1/2 cursor-pointer group z-10', className)}>
+  <div className={cn('group absolute top-1/2 z-10 -translate-y-1/2 cursor-pointer', className)}>
     <svg width={36} height={36} viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect
         width={36}
@@ -580,7 +580,7 @@ const NavigationArrow = ({ direction, className }: { direction: 'prev' | 'next';
         stroke=""
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="stroke-[#292929] group-hover:stroke-white dark:stroke-white transition-all duration-300 ease-in-out"
+        className="stroke-[#292929] transition-all duration-300 ease-in-out group-hover:stroke-white dark:stroke-white"
       />
     </svg>
   </div>
@@ -958,11 +958,85 @@ const AndroidIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const FeatureCardIcon1 = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path
+      d="M14.5858 2.58579C14.2107 2.21071 13.702 2 13.1716 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8.82843C20 8.29799 19.7893 7.78929 19.4142 7.41421L14.5858 2.58579Z"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M16 17H8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16 13H8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M10 9H9H8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M14 2V8H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const FeatureCardIcon2 = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 2.25V21.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M17.25 8.25C17.25 7.75754 17.153 7.26991 16.9645 6.81494C16.7761 6.35997 16.4999 5.94657 16.1517 5.59835C15.8034 5.25013 15.39 4.97391 14.9351 4.78545C14.4801 4.597 13.9925 4.5 13.5 4.5H10.125C9.13044 4.5 8.17661 4.89509 7.47335 5.59835C6.77009 6.30161 6.375 7.25544 6.375 8.25C6.375 9.24456 6.77009 10.1984 7.47335 10.9017C8.17661 11.6049 9.13044 12 10.125 12H14.25C15.2446 12 16.1984 12.3951 16.9017 13.0983C17.6049 13.8016 18 14.7554 18 15.75C18 16.7446 17.6049 17.6984 16.9017 18.4017C16.1984 19.1049 15.2446 19.5 14.25 19.5H9.75C8.75544 19.5 7.80161 19.1049 7.09835 18.4017C6.39509 17.6984 6 16.7446 6 15.75"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const FeatureCardIcon3 = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" aria-hidden="true">
+    <path
+      d="M12.25 7.33301L9.16421 10.4188C8.38316 11.1998 7.11683 11.1998 6.33579 10.4188L5.75 9.83301"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+    />
+    <path
+      d="M16.75 4.69664L8.75 0.833008L0.75 4.69664C0.75 13.833 6.25 17.333 8.75 17.833C11.25 17.333 16.75 13.833 16.75 4.69664Z"
+      stroke="white"
+      strokeWidth="1.5"
+    />
+  </svg>
+);
+
+const FeatureCardIcon4 = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none" aria-hidden="true">
+    <path
+      d="M16.5 16.5C17.7426 16.5 18.75 15.4926 18.75 14.25C18.75 13.0074 17.7426 12 16.5 12C15.2574 12 14.25 13.0074 14.25 14.25C14.25 15.4926 15.2574 16.5 16.5 16.5Z"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M4.5 0.75H13.5C14.2956 0.75 15.0587 1.06607 15.6213 1.62868C16.1839 2.19129 16.5 2.95435 16.5 3.75C16.5 4.54565 16.1839 5.30871 15.6213 5.87132C15.0587 6.43393 14.2956 6.75 13.5 6.75H4.5C3.50544 6.75 2.55161 7.14509 1.84835 7.84835C1.14509 8.55161 0.75 9.50544 0.75 10.5C0.75 11.4946 1.14509 12.4484 1.84835 13.1517C2.55161 13.8549 3.50544 14.25 4.5 14.25H14.25"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const CheckmarkIcon: FC<ArrowIconProps> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none" className={className}>
+    <path
+      d="M4.31661 6.75605L9.74905 1.42144C10.0836 1.0959 10.0836 0.569702 9.74905 0.244158C9.41446 -0.081386 8.87363 -0.081386 8.53904 0.244158L3.7116 4.99012L1.46096 2.78807C1.12636 2.46253 0.585538 2.46253 0.250945 2.78807C-0.0836483 3.11362 -0.0836483 3.63982 0.250945 3.96536L3.1066 6.75605C3.27347 6.91841 3.49253 7 3.7116 7C3.93067 7 4.14974 6.91841 4.31661 6.75605Z"
+      fill="#1A1A1C"
+    />
+  </svg>
+);
+
 export {
   AndroidIcon,
   ArrowIcon,
   CalendarIcon,
   CheckIcon,
+  CheckmarkIcon,
   ChromeExtensionIcon,
   ClockIcon,
   CompanyProgressIcon,
@@ -972,6 +1046,10 @@ export {
   DownloadIcon,
   DribbleIcon,
   FacebookIcon,
+  FeatureCardIcon1,
+  FeatureCardIcon2,
+  FeatureCardIcon3,
+  FeatureCardIcon4,
   GithubIcon,
   GradientStarIcon,
   GraphCheckIcon,

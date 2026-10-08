@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/Button';
 
 const TermsConditionContent = () => {
   return (
@@ -88,11 +88,11 @@ const TermsConditionContent = () => {
             </div>
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
-            <Link
-              href="/refund-policy"
-              className="section-button btn dark:btn-accent hover:btn-primary btn-xl btn-secondary">
-              <span>Learn more about our refund policy</span>
-            </Link>
+            <div className="mt-14 md:mt-[70px]">
+              <LinkButton href="/refund-policy" className="btn-v3-lg btn-v3-secondary">
+                Learn more about our refund policy
+              </LinkButton>
+            </div>
           </RevealAnimation>
           <RevealAnimation delay={0.5}>
             <div className="space-y-6">
@@ -140,11 +140,11 @@ const TermsConditionContent = () => {
             </div>
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
-            <Link
-              href="/privacy-policy"
-              className="section-button btn btn-xl dark:btn-accent hover:btn-primary btn-secondary">
-              <span>Read our detailed privacy policy</span>
-            </Link>
+            <div className="mt-14 md:mt-[70px]">
+              <LinkButton href="/privacy-policy" className="btn-v3-lg btn-v3-secondary">
+                Read our detailed privacy policy
+              </LinkButton>
+            </div>
           </RevealAnimation>
         </article>
       </div>

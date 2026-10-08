@@ -1,139 +1,152 @@
-import integrationImgOne from '@public/images/ns-img-57.png';
-import integrationImgTwo from '@public/images/ns-img-58.svg';
-import integrationImgThree from '@public/images/ns-img-59.svg';
-import integrationImgOneDark from '@public/images/ns-img-dark-35.png';
-import integrationImgTwoDark from '@public/images/ns-img-dark-36.svg';
-import integrationImgThreeDark from '@public/images/ns-img-dark-37.svg';
-import Image from 'next/image';
+import { cn } from '@/utils/cn';
+import confluence from '@public/images/icons/confluence.svg';
+import edge from '@public/images/icons/edge.svg';
+import figma from '@public/images/icons/figma.svg';
+import framer from '@public/images/icons/framer.svg';
+import gmail from '@public/images/icons/gmail.svg';
+import google_meet from '@public/images/icons/google-meet.svg';
+import google from '@public/images/icons/google.svg';
+import marvel_dark from '@public/images/icons/marvel-dark.svg';
+import marvel from '@public/images/icons/marvel.svg';
+import microsoft from '@public/images/icons/microsoft.svg';
+import ms_yammer_dark from '@public/images/icons/ms_yammer-dark.svg';
+import ms_yammer from '@public/images/icons/ms_yammer.svg';
+import slack from '@public/images/icons/slack.svg';
+import snapchat from '@public/images/icons/snapchat.svg';
+import vl_white from '@public/images/icons/vl-white.svg';
+import vl from '@public/images/icons/vl.svg';
+import Image, { type StaticImageData } from 'next/image';
+import Marquee from 'react-fast-marquee';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
 
-const integrationFeatures = [
-  {
-    id: 1,
-    text: 'On Demand Support',
-    delay: 0.6,
-  },
-  {
-    id: 2,
-    text: 'Information Sharing',
-    delay: 0.7,
-  },
-  {
-    id: 3,
-    text: 'Cloud Technology',
-    delay: 0.8,
-  },
+type LogoItem = {
+  id: string;
+  src: StaticImageData;
+  alt: string;
+  width?: number;
+  height?: number;
+  darkSrc?: StaticImageData;
+};
+
+const figureClasses =
+  'dark:bg-background-6 border-background-2 dark:border-background-9 ml-8 flex size-20 items-center justify-center rounded-full border-[10px] bg-white md:size-[120px]';
+
+const marqueeOneLogos: LogoItem[] = [
+  { id: 'google', src: google, alt: 'Google logo' },
+  { id: 'slack', src: slack, alt: 'Slack logo' },
+  { id: 'confluence', src: confluence, alt: 'Confluence logo' },
+  { id: 'snapchat', src: snapchat, alt: 'Snapchat logo' },
+  { id: 'ms-yammer', src: ms_yammer, darkSrc: ms_yammer_dark, alt: 'Yammer logo' },
+  { id: 'figma', src: figma, alt: 'Figma logo' },
+  { id: 'microsoft', src: microsoft, alt: 'Microsoft logo' },
+];
+
+const marqueeTwoLogos: LogoItem[] = [
+  { id: 'google-meet', src: google_meet, alt: 'Google Meet logo' },
+  { id: 'edge', src: edge, alt: 'Microsoft Edge logo', width: 48, height: 48 },
+  { id: 'vl', src: vl, darkSrc: vl_white, alt: 'LV logo' },
+  { id: 'framer', src: framer, alt: 'Framer logo' },
+  { id: 'marvel', src: marvel, darkSrc: marvel_dark, alt: 'Marvel logo' },
+  { id: 'confluence-2', src: confluence, alt: 'Confluence logo' },
+  { id: 'gmail', src: gmail, alt: 'Gmail logo' },
 ];
 
 const Integration = () => {
   return (
-    <section className="dark:bg-background-7 bg-white pt-[50px] pb-[50px] md:pt-[75px] md:pb-[75px] lg:pt-[100px] lg:pb-[100px]">
+    <section
+      className="bg-background-2 dark:bg-background-6 py-[50px] md:py-[70px] lg:py-[85px] xl:py-[100px]"
+      aria-label="Integration Partners">
       <div className="main-container">
-        <div className="grid grid-cols-12 items-center gap-y-16 lg:gap-20 xl:gap-[100px]">
-          <div className="col-span-12 pt-[100px] lg:col-span-6 lg:pt-[150px]">
-            <div className="relative z-10 inline-block max-lg:left-1/2 max-lg:-translate-x-1/2">
-              <RevealAnimation delay={0.2} direction="left" offset={100}>
-                <figure className="max-w-[358px] rounded-[20px]">
-                  <Image
-                    src={integrationImgOne}
-                    alt="about-data-integration"
-                    className="size-full rounded-[20px] object-cover dark:hidden"
-                  />
-                  <Image
-                    src={integrationImgOneDark}
-                    alt="about-data-integration"
-                    className="hidden size-full rounded-[20px] object-cover dark:inline-block"
-                  />
-                </figure>
-              </RevealAnimation>
-              <RevealAnimation delay={0.3} direction="right">
-                <figure className="absolute -top-12 -right-14 overflow-hidden rounded-2xl max-sm:w-[200px] sm:-top-[90px] sm:-right-[200px] md:-right-[150px] md:w-[250px] lg:-right-[150px] lg:w-[260px] xl:-right-[200px] xl:w-auto">
-                  <Image
-                    src={integrationImgTwo}
-                    alt="about-data-integration"
-                    className="block size-full object-cover dark:hidden"
-                  />
-                  <Image
-                    src={integrationImgTwoDark}
-                    alt="about-data"
-                    className="hidden size-full object-cover dark:block"
-                  />
-                </figure>
-              </RevealAnimation>
-              <RevealAnimation delay={0.4} direction="right">
-                <figure className="absolute -right-14 bottom-12 -z-10 overflow-hidden rounded-2xl max-sm:w-[130px] sm:-right-[200px] sm:bottom-[85px] md:-right-[150px] lg:-right-[150px] xl:-right-[200px]">
-                  <Image
-                    src={integrationImgThree}
-                    alt="about-data-integration"
-                    className="block size-full object-cover dark:hidden"
-                  />
-                  <Image
-                    src={integrationImgThreeDark}
-                    alt="about-data-integration"
-                    className="hidden size-full object-cover dark:inline-block"
-                  />
-                </figure>
-              </RevealAnimation>
-            </div>
-          </div>
-          <div className="col-span-12 lg:col-span-6">
-            <div className="space-y-3 text-center lg:text-left">
-              <RevealAnimation delay={0.3}>
-                <span className="badge badge-cyan">Data integrations</span>
-              </RevealAnimation>
-              <RevealAnimation delay={0.4}>
-                <h2 className="mx-auto w-full max-w-[592px] lg:mx-0">
-                  A clear vision is essential for understanding wealth dynamics.
-                </h2>
-              </RevealAnimation>
-              <RevealAnimation delay={0.5}>
-                <p className="mx-auto w-full max-w-[450px] lg:mx-0 lg:max-w-[592px]">
-                  A clear vision is essential for understanding wealth dynamics because it provides direction, purpose,
-                  and clarity in navigating financial growth and sustainability.
-                </p>
-              </RevealAnimation>
-            </div>
-            <div className="pt-8 pb-14">
-              <ul className="flex flex-wrap items-center justify-center gap-4 lg:justify-start xl:gap-6">
-                {integrationFeatures.map((feature) => (
-                  <RevealAnimation key={feature.id} delay={feature.delay}>
-                    <li className="flex items-center gap-2">
-                      <span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={15}
-                          height={11}
-                          viewBox="0 0 15 11"
-                          fill="none"
-                          className="shrink-0">
-                          <path
-                            d="M13.1875 1.79102L5.3125 9.66567L1.375 5.72852"
-                            className="stroke-secondary dark:stroke-accent"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <span className="lg:text-tagline-1 text-tagline-2 text-secondary dark:text-accent/60 font-medium">
-                        {feature.text}
-                      </span>
-                    </li>
-                  </RevealAnimation>
-                ))}
-              </ul>
-            </div>
-            <RevealAnimation delay={0.8}>
-              <div className="text-center lg:text-left">
-                <LinkButton
-                  href="/integration"
-                  className="btn btn-primary hover:btn-secondary btn-xl dark:hover:btn-accent max-[426px]:w-[87%] max-[376px]:w-full md:w-auto">
-                  Start your journey
-                </LinkButton>
-              </div>
+        <div className="space-y-[70px]">
+          {/* integration heading  */}
+          <div className="mx-auto w-full max-w-[1028px] text-center">
+            <RevealAnimation delay={0.2}>
+              <span className="badge badge-green mb-5">Integration</span>
+            </RevealAnimation>
+            <RevealAnimation delay={0.3}>
+              <h2 className="text-heading-3 lg:text-heading-2 mb-3">
+                Enhance your productivity effortlessly with over 50 integrations.
+              </h2>
+            </RevealAnimation>
+            <RevealAnimation delay={0.4}>
+              <p className="text-secondary/60 dark:text-accent/60 mx-auto w-full max-w-[582px]">
+                Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&apos;s not Latin
+                though it looks like nothing.
+              </p>
             </RevealAnimation>
           </div>
+          {/* brand logos  */}
+          <RevealAnimation delay={0.6}>
+            <div className="space-y-7">
+              {/* marquee logo one  */}
+              <div className="relative mx-auto max-w-[1128px]">
+                {/* left gradient overlay  */}
+                <div className="from-background-2/90 dark:from-background-6 absolute top-0 left-0 z-40 h-[120px] w-[15%] bg-gradient-to-r to-transparent md:w-[20%]" />
+                {/* right gradient overlay  */}
+                <div className="from-background-2/90 dark:from-background-6 absolute top-0 right-0 z-40 h-[120px] w-[15%] bg-gradient-to-l to-transparent md:w-[20%]" />
+                <Marquee autoFill speed={70}>
+                  <div className="flex items-center justify-center gap-5 md:gap-[34px]">
+                    {marqueeOneLogos.map(({ id, src, alt, darkSrc, width, height }) => (
+                      <figure key={id} className={figureClasses}>
+                        <Image
+                          src={src}
+                          alt={alt}
+                          loading="lazy"
+                          className={cn(id !== 'edge' && 'size-12', darkSrc && 'dark:hidden')}
+                          width={width}
+                          height={height}
+                        />
+                        {darkSrc && (
+                          <Image
+                            src={darkSrc}
+                            alt={alt}
+                            loading="lazy"
+                            className="hidden dark:inline-block"
+                            width={width}
+                            height={height}
+                          />
+                        )}
+                      </figure>
+                    ))}
+                  </div>
+                </Marquee>
+              </div>
+
+              {/* marquee logo two  */}
+              <div className="relative mx-auto max-w-[985px]">
+                {/* left side gradient overlay  */}
+                <div className="from-background-2/90 dark:from-background-6 absolute top-0 left-0 z-40 h-[120px] w-[15%] bg-gradient-to-r to-transparent md:w-[20%]" />
+                {/* right side gradient overlay  */}
+                <div className="from-background-2/90 dark:from-background-6 absolute top-0 right-0 z-40 h-[120px] w-[15%] bg-gradient-to-l to-transparent md:w-[20%]" />
+                <Marquee autoFill speed={70} direction="right">
+                  <div className="flex items-center justify-center gap-[34px]">
+                    {marqueeTwoLogos.map(({ id, src, alt, darkSrc, width, height }) => (
+                      <figure key={id} className={figureClasses}>
+                        <Image
+                          src={src}
+                          alt={alt}
+                          loading="lazy"
+                          className={cn(id !== 'edge' && 'size-12', darkSrc && 'dark:hidden')}
+                          width={width}
+                          height={height}
+                        />
+                        {darkSrc && (
+                          <Image
+                            src={darkSrc}
+                            alt={alt}
+                            loading="lazy"
+                            className="hidden dark:inline-block"
+                            width={width}
+                            height={height}
+                          />
+                        )}
+                      </figure>
+                    ))}
+                  </div>
+                </Marquee>
+              </div>
+            </div>
+          </RevealAnimation>
         </div>
       </div>
     </section>

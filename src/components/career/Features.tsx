@@ -11,7 +11,6 @@ import featureAssetDark4 from '@public/images/ns-img-dark-47.png';
 import featureAssetDark5 from '@public/images/ns-img-dark-48.png';
 import featureAssetDark6 from '@public/images/ns-img-dark-49.png';
 import Image from 'next/image';
-import { FC } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
 
 const data = [
@@ -59,7 +58,7 @@ const data = [
   },
 ];
 
-const Features: FC = () => {
+const Features = () => {
   return (
     <section className="dark:bg-background-6 bg-white py-[100px] xl:py-[200px]">
       <div className="main-container">

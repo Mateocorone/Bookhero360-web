@@ -201,21 +201,6 @@ const UseCaseIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const CaseStudyICon = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className={cn('stroke-secondary dark:stroke-accent size-4', className)}
-    viewBox="0 0 16 16"
-    fill="none">
-    <path
-      d="M7.0625 13.625C10.6869 13.625 13.625 10.6869 13.625 7.0625C13.625 3.43813 10.6869 0.5 7.0625 0.5C3.43813 0.5 0.5 3.43813 0.5 7.0625C0.5 10.6869 3.43813 13.625 7.0625 13.625Z"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path d="M11.7021 11.7031L15.4991 15.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
 const FeatureIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -438,9 +423,9 @@ const BrandKitIcon = ({ className }: { className?: string }) => (
 const DownloadIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    className={cn('stroke-secondary dark:stroke-accent size-5', className)}
     viewBox="0 0 20 20"
-    fill="none"
-    className={cn('stroke-secondary dark:stroke-accent size-5', className)}>
+    fill="none">
     <path
       d="M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5"
       strokeLinecap="round"
@@ -538,51 +523,6 @@ const ContactIcon = ({ className }: { className?: string }) => (
         <rect width={20} height={20} fill="white" />
       </clipPath>
     </defs>
-  </svg>
-);
-
-const SupportIcon = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 17 18"
-    className={cn('stroke-secondary dark:stroke-accent size-[17px] h-[18px]', className)}
-    fill="none">
-    <path
-      d="M15.6137 8H13.1137C12.7822 8 12.4643 8.1317 12.2299 8.36612C11.9954 8.60054 11.8637 8.91848 11.8637 9.25V12.375C11.8637 12.7065 11.9954 13.0245 12.2299 13.2589C12.4643 13.4933 12.7822 13.625 13.1137 13.625H14.3637C14.6953 13.625 15.0132 13.4933 15.2476 13.2589C15.482 13.0245 15.6137 12.7065 15.6137 12.375V8ZM15.6137 8C15.6137 7.01031 15.4179 6.03039 15.0374 5.11675C14.6569 4.20311 14.0994 3.3738 13.3969 2.67664C12.6944 1.97947 11.8609 1.42823 10.9444 1.0547C10.0279 0.68116 9.04654 0.492712 8.05687 0.500216C7.0672 0.492712 6.08583 0.68116 5.16932 1.0547C4.25282 1.42823 3.41931 1.97947 2.71684 2.67664C2.01437 3.3738 1.45683 4.20311 1.07636 5.11675C0.695883 6.03039 0.5 7.01031 0.5 8V12.375C0.5 12.7065 0.631696 13.0245 0.866116 13.2589C1.10054 13.4933 1.41848 13.625 1.75 13.625H3C3.33152 13.625 3.64946 13.4933 3.88388 13.2589C4.1183 13.0245 4.25 12.7065 4.25 12.375V9.25C4.25 8.91848 4.1183 8.60054 3.88388 8.36612C3.64946 8.1317 3.33152 8 3 8H0.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M15.6137 12.375V14.25C15.6137 14.913 15.3503 15.5489 14.8815 16.0178C14.4127 16.4866 13.7768 16.75 13.1137 16.75H8.625"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
-const SupportIconV2 = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
-    fill="none"
-    className={cn('size-4, stroke-secondary dark:stroke-accent', className)}>
-    <path
-      d="M1.54912 11.8217C0.617298 10.2509 0.290965 8.3939 0.631402 6.59948C0.971839 4.80507 1.95563 3.19666 3.39803 2.07627C4.84044 0.955873 6.64224 0.400575 8.46509 0.514644C10.2879 0.628714 12.0065 1.4043 13.2979 2.69577C14.5894 3.98725 15.365 5.70576 15.4791 7.52861C15.5932 9.35147 15.0379 11.1533 13.9175 12.5957C12.7971 14.0381 11.1887 15.0219 9.39429 15.3623C7.59988 15.7028 5.74291 15.3765 4.17207 14.4446L4.17209 14.4446L1.58173 15.1847C1.47456 15.2153 1.36115 15.2167 1.25325 15.1887C1.14536 15.1608 1.0469 15.1045 0.968086 15.0257C0.889272 14.9468 0.832968 14.8484 0.80501 14.7405C0.777051 14.6326 0.778456 14.5192 0.809077 14.412L1.54918 11.8216L1.54912 11.8217Z"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M8 7.55615C8.24162 7.55615 8.4375 7.75203 8.4375 7.99365C8.4375 8.23528 8.24162 8.43115 8 8.43115C7.75838 8.43115 7.5625 8.23528 7.5625 7.99365C7.5625 7.75203 7.75838 7.55615 8 7.55615Z"
-      fill="#12161F"
-    />
-    <path
-      d="M4.25 7.55615C4.49162 7.55615 4.6875 7.75203 4.6875 7.99365C4.6875 8.23528 4.49162 8.43115 4.25 8.43115C4.00838 8.43115 3.8125 8.23528 3.8125 7.99365C3.8125 7.75203 4.00838 7.55615 4.25 7.55615Z"
-      fill="#12161F"
-    />
-    <path
-      d="M11.75 7.55615C11.9916 7.55615 12.1875 7.75203 12.1875 7.99365C12.1875 8.23528 11.9916 8.43115 11.75 8.43115C11.5084 8.43115 11.3125 8.23528 11.3125 7.99365C11.3125 7.75203 11.5084 7.55615 11.75 7.55615Z"
-      fill="#12161F"
-    />
   </svg>
 );
 
@@ -1041,7 +981,6 @@ export {
   BrandKitIcon,
   CareerIcon,
   CareerIconV2,
-  CaseStudyICon,
   ChangeLogIcon,
   ContactIcon,
   CustomersIcon,
@@ -1070,8 +1009,6 @@ export {
   ServiceIcon,
   SignUpIcon,
   SuccessIcon,
-  SupportIcon,
-  SupportIconV2,
   TeamIcon,
   TermsConditionsIcon,
   TestimonialIcon,

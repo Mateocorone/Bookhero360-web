@@ -1,28 +1,28 @@
-import AboutCTA from '@/components/about/CTA';
+import AboutMap from '@/components/about/AboutMap';
+import CTA from '@/components/about/CTA';
+import Feature from '@/components/about/Feature';
+import Innovation from '@/components/about/Innovation';
 import OurMission from '@/components/about/OurMission';
-import OurSuccess from '@/components/about/OurSuccess';
-import Reviews from '@/components/about/Reviews';
-import Team from '@/components/about/Team';
-import VisionStatement from '@/components/about/VisionStatement';
-import WhyChooseUs from '@/components/about/WhyChooseUs';
+import OurVision from '@/components/about/OurVision';
+import Teams from '@/components/about/Teams';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'About - Digital Marketing || NextSaaS',
+  title: 'About Us - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-7">
-      <VisionStatement />
+    <main className="bg-background-3 dark:bg-background-5">
+      <Feature />
       <OurMission />
-      <OurSuccess />
-      <WhyChooseUs />
-      <Team />
-      <Reviews />
-      <AboutCTA />
+      <OurVision />
+      <Innovation />
+      <Teams />
+      <AboutMap />
+      <CTA />
     </main>
   );
 };

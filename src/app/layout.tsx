@@ -1,10 +1,9 @@
+import HideOnApp from '@/components/shared/HideOnApp';
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
-import { ThemeProvider } from '@/components/shared/ThemeProvider';
-import ThemeToggle from '@/components/shared/ThemeToggle';
-import HideOnApp from '@/components/shared/HideOnApp';
 import Footer from '@/components/shared/footer/Footer';
 import Navbar from '@/components/shared/navbar/Navbar';
+import { AppContextProvider } from '@/context/AppContext';
 import { interTight } from '@/utils/font';
 import { generateMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -22,8 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${interTight.variable} bg-white antialiased dark:bg-black`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+      <body className={`${interTight.variable} bg-white antialiased`}>
+        <AppContextProvider>
           <Suspense>
             <SmoothScrollProvider>
               <ScrollProgress />
@@ -31,13 +30,12 @@ export default function RootLayout({
                 <Navbar />
               </HideOnApp>
               {children}
-              <ThemeToggle />
               <HideOnApp>
                 <Footer />
               </HideOnApp>
             </SmoothScrollProvider>
           </Suspense>
-        </ThemeProvider>
+        </AppContextProvider>
       </body>
     </html>
   );

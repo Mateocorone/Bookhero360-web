@@ -1,110 +1,182 @@
-import { cn } from '@/utils/cn';
-import gradient22Img from '@public/images/ns-img-510.png';
-import Image from 'next/image';
-import Marquee from 'react-fast-marquee';
-import RevealAnimation from '../animation/RevealAnimation';
-import Icon, { IconName } from '../brand/Icon';
+'use client';
 
-interface MailExample {
-  id: number;
-  business: string;
-  subject: string;
+import RevealAnimation from '@/components/animation/RevealAnimation';
+import { IconName } from '@/components/brand/Icon';
+import { useEffect, useRef } from 'react';
+import type { Swiper as SwiperType } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import TestimonialCard from './TestimonialCard';
+
+interface UseCase {
+  title: string;
+  description: string;
+  name: string;
+  designation: string;
   icon: IconName;
-  message: string;
 }
 
-const mailExamples: MailExample[] = [
+// Ejemplos ilustrativos del correo de confirmación (no son testimonios de clientes).
+const useCases: UseCase[] = [
   {
-    id: 1,
-    business: 'Consultorio odontológico',
-    subject: 'Tu cita está confirmada',
-    icon: 'user',
-    message:
-      'Hola Camila, tu reserva para Limpieza dental quedó confirmada el 14 de octubre a las 10:00. ¡Te esperamos en Dental Sur!',
+    title: 'Consultorio odontológico',
+    description: '"Hola Camila, tu reserva para Limpieza dental quedó confirmada el 14 de octubre a las 10:00. ¡Te esperamos en Dental Sur!"',
+    name: 'Dental Sur',
+    designation: 'Ejemplo de correo',
+    icon: 'shield',
   },
   {
-    id: 2,
-    business: 'Salón de belleza',
-    subject: 'Reserva confirmada',
+    title: 'Salón de belleza',
+    description: '"Hola Laura, tu reserva para Corte y color quedó confirmada el 18 de octubre a las 15:30. ¡Nos vemos en Studio Aura!"',
+    name: 'Studio Aura',
+    designation: 'Ejemplo de correo',
     icon: 'sparkles',
-    message:
-      'Hola Laura, tu reserva para Corte y color quedó confirmada el 18 de octubre a las 15:30. ¡Nos vemos en Studio Aura!',
   },
   {
-    id: 3,
-    business: 'Taller mecánico',
-    subject: 'Revisión agendada',
+    title: 'Taller mecánico',
+    description: '"Hola Andrés, tu reserva para Revisión general quedó confirmada el 21 de octubre a las 09:00. ¡Te esperamos en Taller Norte!"',
+    name: 'Taller Norte',
+    designation: 'Ejemplo de correo',
     icon: 'settings',
-    message:
-      'Hola Andrés, tu reserva para Revisión general quedó confirmada el 21 de octubre a las 09:00. ¡Te esperamos en Taller Norte!',
+  },
+  {
+    title: 'Psicología y bienestar',
+    description: '"Hola Sofía, tu sesión de Terapia individual quedó confirmada el 22 de octubre a las 17:00. Te esperamos en Espacio Calma."',
+    name: 'Espacio Calma',
+    designation: 'Ejemplo de correo',
+    icon: 'user',
+  },
+  {
+    title: 'Academia de idiomas',
+    description: '"Hola Mateo, tu clase de Inglés conversacional quedó confirmada el 23 de octubre a las 18:30. ¡Nos vemos en Lingua!"',
+    name: 'Academia Lingua',
+    designation: 'Ejemplo de correo',
+    icon: 'globe',
+  },
+  {
+    title: 'Barbería',
+    description: '"Hola Julián, tu reserva para Corte y barba quedó confirmada el 24 de octubre a las 11:00. ¡Te esperamos en Barber 22!"',
+    name: 'Barber 22',
+    designation: 'Ejemplo de correo',
+    icon: 'clock',
+  },
+  {
+    title: 'Fisioterapia',
+    description: '"Hola Elena, tu sesión de Rehabilitación quedó confirmada el 25 de octubre a las 08:30. ¡Te esperamos en Fisio Plus!"',
+    name: 'Fisio Plus',
+    designation: 'Ejemplo de correo',
+    icon: 'users',
+  },
+  {
+    title: 'Asesoría legal',
+    description: '"Hola Ricardo, tu consulta de Asesoría laboral quedó confirmada el 28 de octubre a las 16:00. Te esperamos en Estudio Mora."',
+    name: 'Estudio Mora',
+    designation: 'Ejemplo de correo',
+    icon: 'list',
   },
 ];
 
 const Testimonial = () => {
-  return (
-    <RevealAnimation delay={0.1}>
-      <section
-        id="correos"
-        className="bg-background-3 dark:bg-background-7 pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[150px] xl:pb-[150px]">
-        <div className="main-container">
-          <div className="mb-[72px] text-center">
-            <RevealAnimation delay={0.1}>
-              <span className="badge badge-cyan mb-5">Confirmaciones por correo</span>
-            </RevealAnimation>
-            <RevealAnimation delay={0.2}>
-              <h2 className="text-secondary dark:text-accent">Así le llega la reserva a tu cliente.</h2>
-            </RevealAnimation>
-          </div>
-        </div>
+  const swiperRef = useRef<SwiperType | null>(null);
 
-        <RevealAnimation delay={0.2}>
-          <div className="relative">
-            <div className="from-background-3 dark:from-background-7 absolute top-0 left-0 z-40 h-full w-[15%] bg-gradient-to-r to-transparent md:w-[20%]" />
-            <div className="from-background-3 dark:from-background-7 absolute top-0 right-0 z-40 h-full w-[15%] bg-gradient-to-l to-transparent md:w-[20%]" />
-            <Marquee>
-              <div className="scroll-bar flex items-center gap-x-10">
-                {mailExamples.map((mail, index) => (
-                  <article
-                    key={mail.id}
-                    className={cn(
-                      'dark:bg-background-5 group hover:bg-secondary hover:dark:bg-background-8 relative min-w-[320px] cursor-pointer space-y-6 overflow-hidden rounded-[12px] bg-white p-4 backdrop-blur-[22px] transition-all duration-500 ease-in-out sm:min-w-[400px] lg:min-w-[722px] lg:space-y-10 lg:rounded-[20px] lg:p-14',
-                      index === 0 && 'ml-10',
-                    )}>
-                    <div className="pointer-events-none absolute -top-[147%] -right-[56%] max-w-[500px] rotate-[295deg] opacity-0 blur-[10px] transition-all duration-500 ease-in-out select-none group-hover:opacity-100 lg:-top-[162%] lg:-right-[56%] lg:max-w-[723px]">
-                      <Image src={gradient22Img} alt="" className="size-full object-cover" width={723} height={500} />
-                    </div>
-                    <div className="relative z-10 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <span className="bg-primary-100 text-primary-700 dark:bg-primary-500/25 flex size-[60px] transform items-center justify-center rounded-full transition-transform duration-500 ease-in-out group-hover:scale-[102%] md:size-[84px]">
-                          <Icon name={mail.icon} className="size-7 md:size-9" />
-                        </span>
-                        <div className="space-y-1">
-                          <h3 className="text-tagline-2 group-hover:text-accent transform font-semibold transition-all duration-500 ease-in-out group-hover:-translate-y-0.5">
-                            {mail.business}
-                          </h3>
-                          <p className="text-tagline-3 group-hover:text-accent/60 transform transition-all duration-500 ease-in-out group-hover:-translate-y-0.5">
-                            Asunto: {mail.subject}
-                          </p>
-                        </div>
-                      </div>
-                      <span className="bg-background-3 dark:bg-background-6 group-hover:bg-background-1 group-hover:dark:bg-background-7 text-primary-600 inline-flex h-11 w-[74px] items-center justify-center rounded-[360px] px-2.5 py-1 transition-all duration-500">
-                        <Icon name="mail" />
-                      </span>
-                    </div>
-                    <blockquote>
-                      <p className="group-hover:text-accent/60 max-w-[530px] transform text-wrap transition-all duration-500 ease-in-out group-hover:translate-x-1">
-                        {mail.message}
-                      </p>
-                    </blockquote>
-                  </article>
-                ))}
-              </div>
-            </Marquee>
+  useEffect(() => {
+    const swiper = swiperRef.current;
+    if (!swiper) {
+      return;
+    }
+
+    const updateSlideStyles = () => {
+      const slides = swiper.slides;
+      const activeIndex = swiper.activeIndex;
+      const slidesPerView = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 4;
+
+      slides.forEach((slide, index) => {
+        slide.style.transition = 'opacity 0.6s ease-out, filter 0.6s ease-out';
+
+        let offset = index - activeIndex;
+        if (offset < 0) {
+          offset += slides.length;
+        }
+
+        if (offset >= 0 && offset < slidesPerView) {
+          slide.style.opacity = '1';
+          slide.style.filter = 'blur(0px)';
+        } else {
+          slide.style.opacity = '0.3';
+          slide.style.filter = 'blur(30px)';
+        }
+      });
+    };
+
+    swiper.on('init', updateSlideStyles);
+    swiper.on('slideChangeTransitionStart', updateSlideStyles);
+
+    return () => {
+      swiper.off('init', updateSlideStyles);
+      swiper.off('slideChangeTransitionStart', updateSlideStyles);
+    };
+  }, []);
+
+  return (
+    <section className="py-18 md:py-20 lg:py-24 xl:py-39">
+      <div className="main-container">
+        <div className="space-y-9">
+          <div className="space-y-3 text-center">
+            <RevealAnimation delay={0.05}>
+              <h2 className="font-normal">Así le llega la reserva a tu cliente</h2>
+            </RevealAnimation>
+            <RevealAnimation delay={0.1}>
+              <p className="mx-auto max-w-[620px] text-lg leading-[150%] font-normal">
+                Ejemplos del correo de confirmación para distintos tipos de negocio.
+              </p>
+            </RevealAnimation>
           </div>
-        </RevealAnimation>
-      </section>
-    </RevealAnimation>
+          <RevealAnimation delay={0.1}>
+            <div className="bg-background-4 rounded-3xl p-1 md:rounded-4xl">
+              <Swiper
+                onSwiper={(swiper) => {
+                  swiperRef.current = swiper;
+                }}
+                modules={[Autoplay, Pagination]}
+                breakpoints={{
+                  425: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 },
+                  1290: { slidesPerView: 4 },
+                }}
+                spaceBetween={4}
+                initialSlide={4}
+                loop={true}
+                loopAdditionalSlides={2}
+                speed={1100}
+                allowTouchMove={true}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                pagination={{
+                  el: '.financial-management-platform-pagination',
+                  clickable: true,
+                  type: 'bullets',
+                  dynamicBullets: false,
+                }}
+                className="financial-management-platform-swiper">
+                {useCases.map((useCase) => (
+                  <SwiperSlide key={useCase.title}>
+                    <TestimonialCard {...useCase} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </RevealAnimation>
+
+          <RevealAnimation delay={0.2}>
+            <div className="financial-management-platform-pagination bg-secondary mx-auto flex !h-6 !w-fit items-center justify-center rounded-[56px] p-2 text-center" />
+          </RevealAnimation>
+        </div>
+      </div>
+    </section>
   );
 };
 
+Testimonial.displayName = 'Testimonial';
 export default Testimonial;

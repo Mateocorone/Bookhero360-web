@@ -3,74 +3,64 @@ import getMarkDownData from '@/utils/getMarkDownData';
 import Image from 'next/image';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
-import SocialLinkV3 from '../shared/SocialLinkV3';
+import SocialLinks from '../shared/SocialLinks';
 
 const Teams = () => {
-  const teams: ITeamMember[] = getMarkDownData<ITeamMember & { [key: string]: unknown }>(
-    'src/data/team',
-    false,
-    'name',
-  ).slice(0, 8);
+  const teams = getMarkDownData<ITeamMember & { [key: string]: unknown }>('src/data/team', false, 'name').slice(0, 9);
   return (
-    <section className="pt-14 pb-[50px] md:pt-16 md:pb-[70px] lg:pt-[88px] lg:pb-[85px] xl:pt-[100px] xl:pb-[100px]">
-      <RevealAnimation delay={0.1}>
-        <div className="main-container bg-background-2 dark:bg-background-8 rounded-2xl py-[100px]">
-          <div>
-            <div className="mx-auto mb-[70px] max-w-[620px] text-center md:w-full">
-              <RevealAnimation delay={0.2}>
-                <span className="badge badge-cyan mb-5">Our team</span>
-              </RevealAnimation>
-              <RevealAnimation delay={0.3}>
-                <h2 className="mb-3">Our innovative, dynamic, and talented team</h2>
-              </RevealAnimation>
-              <RevealAnimation delay={0.4}>
-                <p>
-                  Our innovative, dynamic, and talented team is the driving force behind our success. Each member brings
-                  a unique blend of expertise
-                </p>
-              </RevealAnimation>
-            </div>
-            {/* team members  */}
-            <div className="mb-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-18">
-              {teams.map((member, index) => (
-                <RevealAnimation key={member.name} delay={0.4 + index * 0.1}>
-                  <div className="mx-auto h-[312px] w-[298px] space-y-[34px]">
-                    {/* team member image */}
-                    <figure className="mx-auto flex size-[156px] items-center justify-center overflow-hidden rounded-full bg-[#d5dbe3]">
-                      <Link href={`/team/${member.slug}`}>
-                        <Image
-                          src={member.userImg}
-                          className="size-full object-cover"
-                          alt={`${member.name} profile img`}
-                          loading="lazy"
-                          width={200}
-                          height={300}
-                        />
-                      </Link>
-                    </figure>
-
-                    {/* team member info */}
-                    <div className="space-y-[27px]">
-                      <div className="text-center">
-                        <Link href={`/team/${member.slug}`}>
-                          <h3 className="text-heading-5">{member.name}</h3>
-                        </Link>
-                        <p className="text-tagline-2">{member.role}</p>
-                      </div>
-
-                      {/* social links */}
-                      <SocialLinkV3 social={member.social} />
-                    </div>
-                  </div>
-                </RevealAnimation>
-              ))}
-            </div>
+    <section className="pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[180px] xl:pb-[100px]">
+      <div className="main-container space-y-[70px]">
+        <div className="space-y-5 text-center">
+          <RevealAnimation delay={0.1}>
+            <span className="badge badge-cyan">Our team</span>
+          </RevealAnimation>
+          <div className="mx-auto max-w-[620px] space-y-3">
+            <RevealAnimation delay={0.2}>
+              <h2>Our innovative, dynamic and talented team</h2>
+            </RevealAnimation>
+            <RevealAnimation delay={0.3}>
+              <p>
+                Our innovative, dynamic, and talented team is the driving force behind our success. Each member brings a
+                unique blend of expertise
+              </p>
+            </RevealAnimation>
           </div>
         </div>
-      </RevealAnimation>
+        <div className="grid grid-cols-12 max-sm:gap-y-8 sm:gap-5 md:gap-8">
+          {teams.map((team, index) => (
+            <RevealAnimation delay={0.4 + index * 0.1} key={team.slug}>
+              <div className="col-span-12 sm:col-span-6 lg:col-span-4">
+                <div className="group dark:bg-background-9 relative z-10 overflow-hidden rounded-[20px] bg-white p-3">
+                  <figure className="mx-auto overflow-hidden lg:max-w-[408px]">
+                    <Link href={`/team/${team.slug}`}>
+                      <Image
+                        src={team.userImg}
+                        alt={`${team.name} profile img`}
+                        loading="lazy"
+                        width={600}
+                        height={600}
+                        quality={100}
+                        className="bg-background-1 dark:bg-background-5 h-full w-full rounded-2xl object-cover"
+                      />
+                    </Link>
+                  </figure>
+                  <div className="shadow-1 dark:bg-background-9 ease-team-ease-1 absolute bottom-7 left-1/2 z-20 mx-auto w-[calc(100%-44px)] max-w-[384px] -translate-x-1/2 cursor-pointer space-y-3 rounded-xl bg-white p-6 transition-all duration-[400ms] sm:bottom-5 lg:translate-y-[30%] lg:scale-[90%] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:scale-100 lg:group-hover:opacity-100">
+                    <div className="text-center">
+                      <h3 className="text-heading-5 text-secondary dark:text-accent font-normal">
+                        <Link href={`/team/${team.slug}`}> {team.name} </Link>
+                      </h3>
+                      <p className="text-tagline-2 text-secondary/40 dark:text-accent/40 font-normal">{team.role}</p>
+                    </div>
+                    <SocialLinks social={team.social} />
+                  </div>
+                </div>
+              </div>
+            </RevealAnimation>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
 
-Teams.displayName = 'Teams';
 export default Teams;

@@ -1,32 +1,31 @@
 import CTA from '@/components/shared/cta/CTA';
-import Experience from '@/components/testimonial/Experience';
+import Client from '@/components/testimonial/Client';
 import Integration from '@/components/testimonial/Integration';
-import TestimonialMarquee from '@/components/testimonial/TestimonialMarquee';
+import Reviews from '@/components/testimonial/Reviews';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Testimonial - Digital Marketing || NextSaaS',
+  title: 'Testimonial - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-7">
-      <TestimonialMarquee />
-      <Experience />
+    <main className="bg-background-1 dark:bg-background-6">
+      <Reviews />
+      <Client />
       <Integration />
       <CTA
         className="dark:bg-background-6 bg-white"
-        badgeClass="badge-cyan"
+        badgeClass="badge-green"
         badgeText="Get started"
-        ctaHeading="Build a complete website using the"
-        spanText="assistance"
+        ctaHeading="Build a complete website using the assistance"
         description="Start your free trial today and see your ideas come to life easily and creatively."
         ctaBtnText="Get started"
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
       />
     </main>
   );
 };
+
 export default page;

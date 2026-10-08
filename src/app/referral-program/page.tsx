@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Referral Program - Digital Marketing || NextSaaS',
+  title: 'Referral Program - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {

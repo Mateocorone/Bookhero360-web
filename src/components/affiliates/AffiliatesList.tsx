@@ -61,7 +61,7 @@ const AffiliatesList = () => {
             <ul className="space-y-4">
               {section.items.map((item, itemIndex) => (
                 <li
-                  key={itemIndex}
+                  key={itemIndex + 1}
                   className={`text-tagline-1 text-secondary/60 dark:text-accent/60 before:relative before:left-0 before:mr-3 before:h-5 before:w-5 before:content-[url('/images/icons/checkmark-white.svg')] before:max-md:top-0 dark:before:content-[url('/images/icons/checkmark-white.svg')] before:md:top-1${
                     itemIndex === 0 ? 'before:inline-block' : ''
                   }`}>

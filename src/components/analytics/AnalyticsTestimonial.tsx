@@ -1,7 +1,7 @@
 import avatar5 from '@public/images/ns-avatar-5.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+import LinkButton from '../ui/button/Button';
 
 const AnalyticsTestimonial = () => {
   return (
@@ -42,9 +42,7 @@ const AnalyticsTestimonial = () => {
         </RevealAnimation>
         <RevealAnimation delay={0.2}>
           <div className="w-fit">
-            <LinkButton
-              href="/testimonial"
-              className="btn btn-primary btn-xl hover:btn-secondary dark:hover:btn-accent">
+            <LinkButton href="/testimonial" className="btn-v3-lg btn-v3-primary mx-auto w-full sm:w-fit">
               Get started
             </LinkButton>
           </div>

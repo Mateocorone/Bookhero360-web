@@ -2,7 +2,7 @@
 import affiliatesCover from '@public/images/ns-img-371.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+import LinkButton from '../ui/button/Button';
 
 const AffiliateProgram = () => {
   return (
@@ -18,9 +18,7 @@ const AffiliateProgram = () => {
                 generous commissions — it’s a win-win!
               </p>
               <div className="mt-7 md:mt-14">
-                <LinkButton
-                  href="/affiliate-policy"
-                  className="btn btn-primary btn-xl hover:btn-secondary dark:hover:btn-accent block w-full md:inline-block md:w-auto">
+                <LinkButton href="/contact-us" className="btn-v3-lg btn-v3-primary mx-auto !w-[80%] sm:!w-fit">
                   Join now
                 </LinkButton>
               </div>

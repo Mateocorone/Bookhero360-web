@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Integration - Digital Marketing || NextSaaS',
+  title: 'Integration - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
@@ -13,13 +13,12 @@ const page = () => {
     <main className="bg-background-3 dark:bg-background-7">
       <Integration />
       <CTA
-        className="dark:bg-background-5 bg-white"
+        className="dark:bg-background-8 bg-white"
         badgeText="Get started"
-        badgeClass="!badge-yellow-v2"
+        badgeClass="!badge-green"
         ctaHeading="Build a complete website using the assistance"
         description="Start your free trial today and see your ideas come to life easily and creatively."
         ctaBtnText="Get started"
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
       />
     </main>
   );

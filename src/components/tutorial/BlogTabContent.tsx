@@ -8,7 +8,7 @@ import blog5 from '@public/images/ns-img-462.png';
 import blog6 from '@public/images/ns-img-463.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+import LinkButton from '../ui/button/Button';
 
 const blogs = [
   {
@@ -143,9 +143,7 @@ const BlogTabContent = () => {
                   <p className="line-clamp-2">{blog.subtitle}</p>
                 </div>
                 <div>
-                  <LinkButton
-                    href="#"
-                    className="btn hover:btn-secondary dark:hover:btn-accent dark:btn-transparent btn-white btn-md">
+                  <LinkButton href="#" className="btn-v3-lg btn-v3-secondary">
                     Read more
                   </LinkButton>
                 </div>

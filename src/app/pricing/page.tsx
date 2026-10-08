@@ -1,6 +1,5 @@
-import Benefits from '@/components/pricing/Benefits';
-import Contact from '@/components/pricing/Contact';
-import Features from '@/components/pricing/Features';
+import Client from '@/components/pricing/Client';
+import Faq from '@/components/pricing/Faq';
 import Pricing from '@/components/pricing/Pricing';
 import CTA from '@/components/shared/cta/CTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -8,24 +7,22 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Pricing - Digital Marketing || NextSaaS',
+  title: 'Pricing - Financial Management Platform || NextSaaS',
 };
 
 const page = () => {
   return (
-    <main className="bg-background-3 dark:bg-background-7">
+    <main className="bg-background-1 dark:bg-background-6">
       <Pricing />
-      <Benefits />
-      <Features />
-      <Contact />
+      <Client />
+      <Faq />
       <CTA
-        className="dark:bg-background-7 bg-background-3"
+        className="dark:bg-background-7 bg-accent"
         badgeText="Get started"
         badgeClass="!badge-cyan"
         ctaHeading="Build a complete website using the assistance"
         description="Start your free trial today and see your ideas come to life easily and creatively."
         ctaBtnText="Get started"
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
       />
     </main>
   );

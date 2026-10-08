@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Apply Now - Digital Marketing || NextSaaS',
+  title: 'Apply Now - NextSaaS',
 };
 
 const CareerDetails = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -28,7 +28,6 @@ const CareerDetails = async ({ params }: { params: Promise<{ slug: string }> }) 
         badgeText="Get Started"
         ctaHeading="Build a complete website using the assistance"
         description="Start your free trial today and see your ideas come to life easily and creatively."
-        btnClass="hover:btn-secondary dark:hover:btn-accent"
         ctaBtnText="Get started"
       />
     </main>

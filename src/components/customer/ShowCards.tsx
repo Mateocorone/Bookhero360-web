@@ -1,9 +1,9 @@
 'use client';
 import { ICustomer } from '@/interface';
 import Image from 'next/image';
-import Link from 'next/link';
 import { createRef, useEffect, useMemo, useState, type RefObject } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/Button';
 import Dropdown, { dropdownData, FilterKey } from './Dropdown';
 
 type FilterState = Record<FilterKey, string>;
@@ -161,11 +161,9 @@ const ShowCards = ({ storiesData }: { storiesData: ICustomer[] }) => {
                     <div className="space-y-13">
                       <p className="text-tagline-1">{story.description}</p>
                       <div>
-                        <Link
-                          href={`/customer/${story.slug}`}
-                          className="btn btn-md btn-white hover:btn-primary dark:btn-transparent mt-13">
-                          <span>Read more</span>
-                        </Link>
+                        <LinkButton href={`/customer/${story.slug}`} className="btn-v3-lg btn-v3-secondary">
+                          Read more
+                        </LinkButton>
                       </div>
                     </div>
                   </div>

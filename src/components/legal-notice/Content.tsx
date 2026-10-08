@@ -4,11 +4,11 @@ import RevealAnimation from '../animation/RevealAnimation';
 // legal notice content
 const Content = () => {
   return (
-    <section className="xl:pb-28 lg:pb-20 pb-16">
+    <section className="pb-16 lg:pb-20 xl:pb-28">
       <div className="main-container">
-        <div className="max-w-[950px] mx-auto w-full">
+        <div className="mx-auto w-full max-w-[950px]">
           <RevealAnimation delay={0.1}>
-            <div className="py-8 space-y-3">
+            <div className="space-y-3 py-8">
               <h2 className="text-heading-4 font-normal">Publisher:</h2>
               <p>
                 The{' '}
@@ -20,20 +20,20 @@ const Content = () => {
                 Registered office: 45 Innovation Avenue, Level 3 – San Francisco, CA 94107, USA <br />
                 Intracommunity VAT number: US000000000 <br />
                 E-mail address:
-                <a href="mailto:contact@nextsaas.ai" className="text-primary-500">
+                <Link href="mailto:contact@nextsaas.ai" className="text-primary-500">
                   contact@nextsaas.ai
-                </a>
+                </Link>
               </p>
             </div>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
-            <div className="py-8 space-y-3">
+            <div className="space-y-3 py-8">
               <h2 className="text-heading-4 font-normal">Director of publication :</h2>
               <p>Mr. Alex Turner, Chief Executive Officer</p>
             </div>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
-            <div className="py-8 space-y-3">
+            <div className="space-y-3 py-8">
               <h2 className="text-heading-4 font-normal">Hosting provider:</h2>
               <p>
                 The{' '}
@@ -45,14 +45,14 @@ const Content = () => {
                 Headquarters: 440 N Barranca Ave #4133, Covina, CA 91723, USA
                 <br />
                 Email:
-                <a href="mailto:support@vercel.com" className="text-primary-500">
+                <Link href="mailto:support@vercel.com" className="text-primary-500">
                   support@vercel.com
-                </a>
+                </Link>
               </p>
             </div>
           </RevealAnimation>
           <RevealAnimation delay={0.4}>
-            <div className="py-8 space-y-3">
+            <div className="space-y-3 py-8">
               <h2 className="text-heading-4 font-normal">Development:</h2>
               <p>
                 This website has been designed and developed by NextSaaS Design Studio. <br />

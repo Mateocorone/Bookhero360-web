@@ -1,72 +1,73 @@
+import checkCircle from '@public/images/icons/check-circle.svg';
+import thumbsUp from '@public/images/icons/thumbs-up.svg';
+import users from '@public/images/icons/users.svg';
+import Image from 'next/image';
 import NumberAnimation from '../animation/NumberAnimation';
 import RevealAnimation from '../animation/RevealAnimation';
 
 const Experience = () => {
   return (
-    <section className="pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[200px] xl:pb-[100px]">
+    <section className="pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[200px]">
       <div className="main-container">
-        <div className="flex flex-col lg:flex-row xl:gap-[100px]">
-          <div className="space-y-5 text-center max-lg:mx-auto max-lg:mb-[70px] md:max-w-[650px] lg:max-w-[442px] lg:text-left">
+        <div className="mb-[70px] space-y-5 text-center">
+          <div className="space-y-3">
             <RevealAnimation delay={0.1}>
-              <span className="badge badge-cyan">Number</span>
+              <h2>Over a decade of experience in this field.</h2>
             </RevealAnimation>
-            <div className="space-y-3">
-              <RevealAnimation delay={0.2}>
-                <h2>Over a decade of experience in this.</h2>
-              </RevealAnimation>
-              <RevealAnimation delay={0.3}>
-                <p>
-                  This extensive experience not only reflects our commitment to excellence but also equips us with the
-                  insight and skills necessary to meet.
-                </p>
-              </RevealAnimation>
-            </div>
-          </div>
-          <div className="grid grow-1 grid-cols-1 gap-8 md:grid-cols-2">
             <RevealAnimation delay={0.2}>
-              <div className="bg-background-2 dark:bg-background-8 flex flex-col justify-between rounded-xl p-8">
-                <div className="flex items-center justify-between">
-                  <h5 className="max-w-[200px]">Relied upon by businesses</h5>
-                  <div className="shrink-0">
-                    <span className="ns-shape-47 text-secondary dark:text-accent text-[52px]" />
-                  </div>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="flex items-center gap-1">
-                    <NumberAnimation number={83} speed={1000} interval={180} rooms={2} heightSpaceRatio={2.5}>
-                      83
-                    </NumberAnimation>
-                    %
-                  </h3>
-                  <p>Avg. Completed</p>
-                </div>
-              </div>
-            </RevealAnimation>
-            <RevealAnimation delay={0.3}>
-              <div className="bg-background-2 dark:bg-background-8 flex flex-col justify-between rounded-xl p-8">
-                <div className="flex items-center justify-between">
-                  <h5 className="max-w-[200px]">The team at NexSaaS bank</h5>
-                  <div className="shrink-0">
-                    <span className="ns-shape-57 text-secondary dark:text-accent text-[52px]" />
-                  </div>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="flex items-center gap-1">
-                    <NumberAnimation number={56} speed={1000} interval={180} rooms={2} heightSpaceRatio={2.2}>
-                      56
-                    </NumberAnimation>
-                    %
-                  </h3>
-                  <p>Avg. Completed</p>
-                </div>
-              </div>
+              <p className="mx-auto max-w-[744px]">
+                With more than ten years of hands-on experience, we’ve built a strong foundation of knowledge, skill,
+                and trust in our industry. Over the years, we’ve navigated evolving trends, embraced new technologies.
+              </p>
             </RevealAnimation>
           </div>
         </div>
+        <RevealAnimation delay={0.3}>
+          <div className="bg-secondary flex flex-col rounded-[20px] py-6 md:flex-row">
+            <div className="max-md:border-b-accent/20 md:border-r-accent/20 flex-1 space-y-6 py-6 max-md:border-b md:border-r">
+              <figure className="bg-ns-yellow mx-auto flex h-[52px] w-20 items-center justify-center rounded-full px-7 py-3.5">
+                <Image src={checkCircle} alt="Satisfied clients" className="size-6" />
+              </figure>
+              <div className="text-center">
+                <h3 className="text-heading-6 flex items-center justify-center gap-0.5 font-normal text-white">
+                  <NumberAnimation number={80} speed={1000} interval={180} rooms={2} heightSpaceRatio={2.5}>
+                    80
+                  </NumberAnimation>
+                  % Project completed
+                </h3>
+              </div>
+            </div>
+            <div className="max-md:border-b-accent/20 md:border-r-accent/20 flex-1 space-y-6 py-6 max-md:border-b md:border-r">
+              <figure className="bg-ns-cyan mx-auto flex h-[52px] w-20 items-center justify-center rounded-full px-7 py-3.5">
+                <Image src={users} alt="Satisfied clients" className="size-6" />
+              </figure>
+              <div className="text-center">
+                <h3 className="text-heading-6 flex items-center justify-center gap-1 font-normal text-white">
+                  <NumberAnimation number={25} speed={1000} interval={180} rooms={2} heightSpaceRatio={2.5}>
+                    25
+                  </NumberAnimation>
+                  Team members
+                </h3>
+              </div>
+            </div>
+            <div className="flex-1 space-y-6 py-6">
+              <figure className="bg-ns-red mx-auto flex h-[52px] w-20 items-center justify-center rounded-full px-7 py-3.5">
+                <Image src={thumbsUp} alt="Satisfied clients" className="size-6" />
+              </figure>
+              <div className="text-center">
+                <h3 className="text-heading-6 flex items-center justify-center gap-1 font-normal text-white">
+                  <NumberAnimation number={250} speed={1000} interval={180} rooms={2} heightSpaceRatio={2.5}>
+                    250
+                  </NumberAnimation>
+                  Satisfied clients
+                </h3>
+              </div>
+            </div>
+          </div>
+        </RevealAnimation>
       </div>
     </section>
   );
 };
 
-Experience.displayName = 'Experience';
 export default Experience;

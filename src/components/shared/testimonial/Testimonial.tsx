@@ -1,5 +1,3 @@
-//  testimonial section
-
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import TestimonialLarge from './TestimonialLarge';
 import TestimonialMobile from './TestimonialMobile';
@@ -24,5 +22,4 @@ const Testimonial = () => {
   );
 };
 
-Testimonial.displayName = 'Testimonial';
 export default Testimonial;

@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { forwardRef } from 'react';
-import { ChangelogItem } from './content';
+import { ChangelogItem } from './Content';
 
 const Card = forwardRef<HTMLDivElement, ChangelogItem>(
   ({ id, dataMonth, title, tag, status, summary, highlights, image }, ref) => {

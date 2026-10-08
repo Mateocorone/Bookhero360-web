@@ -79,7 +79,7 @@ export default function DemoShowcase({ activeDemoId }: Readonly<{ activeDemoId: 
         style={{ writingMode: 'sideways-lr', textOrientation: 'mixed' }}
         onClick={handleOpen}
         className="text-accent text-tagline-1 fixed right-0 bottom-1/2 z-[99999] flex translate-y-1/2 cursor-pointer items-center gap-4 rounded-l-xl bg-[#DE4A40] pt-4 pb-1 font-medium sm:pr-1 sm:pl-1">
-        <span className="">
+        <span>
           <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
             <path d="M10 44C4.47715 44 0 39.5228 0 34L0 0L44 0L44 44L10 44Z" fill="#1A1A1C" fillOpacity="0.1" />
             <path d="M16.1728 24.1932L14 21.9995L16.1728 19.8059L18.3456 21.9995L16.1728 24.1932Z" fill="#F5F5F7" />

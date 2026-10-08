@@ -1,6 +1,6 @@
 //press hero
-import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
+import LinkButton from '../ui/button/Button';
 
 const Hero = () => {
   return (
@@ -28,20 +28,16 @@ const Hero = () => {
           <div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 md:flex-row md:gap-y-0">
             <RevealAnimation delay={0.4} direction="left" offset={50} instant>
               <div>
-                <Link
-                  href="/brandkit"
-                  className="btn btn-secondary hover:btn-primary dark:hover:btn-primary dark:btn-accent btn-lg md:btn-xl mx-auto w-full md:mx-0 md:w-auto">
-                  <span>Download press kit</span>
-                </Link>
+                <LinkButton href="#" className="btn-v3-lg btn-v3-secondary">
+                  Download press kit
+                </LinkButton>
               </div>
             </RevealAnimation>
             <RevealAnimation delay={0.5} direction="left" offset={50} instant>
-              <div>
-                <Link
-                  href="/pricing"
-                  className="btn btn-white hover:btn-secondary dark:hover:btn-primary dark:btn-accent btn-lg md:btn-xl mx-auto w-full md:mx-0 md:w-auto">
-                  <span>Build Ai</span>
-                </Link>
+              <div className="w-3/5 sm:w-auto">
+                <LinkButton href="/pricing" className="btn-v3-lg btn-v3-white w-full sm:w-fit">
+                  Build Ai
+                </LinkButton>
               </div>
             </RevealAnimation>
           </div>
